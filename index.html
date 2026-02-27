@@ -450,6 +450,73 @@
     .cert-btn.secondary{ background: #fff; color: #111; border: 1px solid rgba(0,0,0,.15); }
     .cert-btn.secondary:hover{ background: #f3f3f3; }
 
+    .cert-preview-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.cert-preview{
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease;
+  z-index: 50;
+}
+
+.cert-preview img{
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.cert-preview-wrapper:hover .cert-preview{
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.cert-preview-wrapper{
+  position: relative;
+  display: inline-block;
+}
+
+.cert-preview{
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 999;
+}
+
+.cert-preview img{
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(0,0,0,.20);
+  border: 1px solid rgba(0,0,0,.10);
+}
+
+.cert-preview-wrapper:hover .cert-preview{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+}
     /* FOOTER */
     .site-footer{
       margin-top: 80px;
@@ -1027,59 +1094,75 @@ technically sound and strategically meaningful.
   <div class="cert-list">
 
     <!-- 1) Google Data Analytics Professional Certificate -->
-    <div class="cert-item">
+<div class="cert-item">
   <div class="cert-left">
-    <div class="cert-name">Google Data Analytics Professional Certificate(v.3)</div>
+    <div class="cert-name">Google Data Analytics Professional Certificate (v.3)</div>
     <div class="cert-issuer">Google · Coursera</div>
     <div class="cert-meta">
-      <span><strong>Issued:</strong> Jan 2026</span>
-      
-      
+      <span>Issued: Jan 2026</span>
     </div>
   </div>
 
   <div class="cert-right">
     <div class="cert-actions">
-      <a class="cert-btn secondary"
-         href="certificates/etl-in-python-sql.pdf" 
-         target="_blank">
-        View PDF
-      </a>
+
+      <div class="cert-preview-wrapper">
+        <a class="cert-btn secondary"
+           href="certificates/google-data-analytics.pdf"
+           target="_blank" rel="noopener">
+          View PDF
+        </a>
+
+        <div class="cert-preview">
+          <img src="certificates/google-data-analytics-preview.png"
+               alt="Google Data Analytics Certificate preview">
+        </div>
+      </div>
 
       <a class="cert-btn primary"
          href="https://www.credly.com/badges/4eab55e0-8792-4067-960f-beebc7379644/linked_in_profile"
-         target="_blank">
+         target="_blank" rel="noopener">
         Show credential
       </a>
+
     </div>
   </div>
 </div>
-
+    
+    
     <!-- 2) Le Wagon Diploma -->
     <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">Le Wagon Data Analytics Bootcamp</div>
     <div class="cert-issuer">Le Wagon</div>
     <div class="cert-meta">
-      <span><strong>Issued:</strong> Nov 2025</span>
-      
+      <span>Issued: Nov 2025</span>
       
     </div>
   </div>
 
   <div class="cert-right">
     <div class="cert-actions">
-      <a class="cert-btn secondary"
-         href="certificates/le-wagon-diploma.pdf" 
-         target="_blank">
-        View PDF
-      </a>
+
+      <div class="cert-preview-wrapper">
+        <a class="cert-btn secondary"
+           href="certificates/le-wagon-diploma.pdf"
+           target="_blank" rel="noopener">
+          View PDF
+        </a>
+
+        <div class="cert-preview">
+          <img src="certificates/le-wagon-diploma-preview.png"
+               alt="Le Wagon Diploma preview">
+        </div>
+      </div>
 
       <a class="cert-btn primary"
          href="https://kitt.lewagon.com/schoolings/48065/public_diploma?token=d5f67fbb1706d705eff404c66eb0345103112d629fc2987ed0a70de1c15a4c81"
-         target="_blank">
+         target="_blank" rel="noopener">
         Show credential
       </a>
+  
     </div>
   </div>
 </div>
@@ -1091,46 +1174,65 @@ technically sound and strategically meaningful.
     <div class="cert-name">ETL in Python and SQL</div>
     <div class="cert-issuer">LinkedIn Learning</div>
     <div class="cert-meta">
-      <span><strong>Issued:</strong> Feb 2026</span>
-      
+      <span>Issued: Feb 2026</span>
       
     </div>
   </div>
 
   <div class="cert-right">
     <div class="cert-actions">
-      <a class="cert-btn secondary"
-         href="certificates/etl-in-python-sql.pdf" 
-         target="_blank">
-        View PDF
-      </a>
+
+      <div class="cert-preview-wrapper">
+        <a class="cert-btn secondary"
+           href="certificates/etl-in-python-sql.pdf"
+           target="_blank" rel="noopener">
+          View PDF
+        </a>
+
+        <div class="cert-preview">
+          <img src="certificates/etl-in-python-sql-preview.png"
+               alt="ETL in Python and SQL Certificate preview">
+        </div>
+      </div>
 
       <a class="cert-btn primary"
          href="https://www.linkedin.com/learning/certificates/378903cf923e8d29949a1a4b027131ee2f5ce935a019cf69ad870710f4070618?trk=share_certificate"
-         target="_blank">
+         target="_blank" rel="noopener">
         Show credential
       </a>
-    </div>
+  
+   </div>
   </div>
 </div>
     
     
-    <!-- 3) PRINCE2 -->
+<!-- 3) PRINCE2 -->
 <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">PRINCE2 Foundation Certificate in Project Management</div>
     <div class="cert-issuer">AXELOS Global Best Practice</div>
     <div class="cert-meta">
-      <span><strong>Issued:</strong> Jan 2024</span>
+      <span>Issued: Jan 2024</span>
     </div>
   </div>
 
   <div class="cert-right">
-    <a class="cert-btn secondary"
-       href="certificates/prince2.pdf"
-       target="_blank">
-      View PDF
-    </a>
+    <div class="cert-actions">
+
+      <div class="cert-preview-wrapper">
+        <a class="cert-btn secondary"
+           href="certificates/prince2.pdf"
+           target="_blank" rel="noopener">
+          View PDF
+        </a>
+
+        <div class="cert-preview" aria-hidden="true">
+          <img src="certificates/prince2-preview.png" 
+          alt="PRINCE2 Certificate preview">
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
@@ -1140,7 +1242,7 @@ technically sound and strategically meaningful.
     <div class="cert-name">Marketing Digital & Plano de Negócio (Criação de PME)</div>
     <div class="cert-issuer">IEFP — Instituto do Emprego e Formação Profissional</div>
     <div class="cert-meta">
-      <span><strong>Issued:</strong> Jul 2025</span>
+      <span>Issued: Jul 2025</span>
     </div>
   </div>
 
@@ -1157,13 +1259,36 @@ technically sound and strategically meaningful.
 </section>
 
 
-
     <!-- PROJECTS -->
 <section id="projects" class="section anchor-offset">
   <h2 class="section-title">Projects</h2>
 
   <div class="projects-list">
 
+
+    <!-- PROJECT: Personal Portfolio -->
+    <article class="project-card">
+  <div class="project-text">
+    <h3 class="project-title">Personal Portfolio Website</h3>
+    <p class="project-subtitle">March 2026</p>
+
+    <div class="project-meta">
+      <span class="project-chip">CSS3</span>
+      <span class="project-chip">HTML5</span>
+      <span class="project-chip">Git & GitHub</span>
+    </div>
+
+    <p class="project-desc">
+      Developed and deployed a personal portfolio website using HTML, CSS and GitHub Pages. 
+    </p>
+
+    <div class="project-actions">
+      <a class="project-btn primary"
+         href="https://github.com/YuliyaCarvalho/Portfolio-Website"
+         target="_blank" rel="noopener">
+        View Repo
+      </a>
+</article>
 
     <!-- PROJECT: PORTUGAL REAL-ESTATE -->
     <article class="project-card">
