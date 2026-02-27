@@ -50,50 +50,166 @@
 
     .muted{ color: var(--muted); }
 
-    /* HERO */
-    /* HERO V2 */
-.hero-v2{
+    /* ===== TOP HERO CLEAN LAYOUT ===== */
+
+.hero-top{
   display: grid;
   grid-template-columns: 380px 1fr;
-  gap: 54px;
-  align-items: start; /* important: align at top */
-  margin-top: 6px;
+  gap: 60px;
+  align-items: start;
+  margin-top: 18px;
 }
 
 @media (max-width: 980px){
-  .hero-v2{
+  .hero-top{
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
 }
 
 .hero-left{
   display: flex;
-  flex-direction: column;
-  gap: 18px;
-  align-items: center;
+  justify-content: center;
 }
 
-.headshot-v2{
-  width: 400px;
-  height: 400px;
+.headshot{
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: var(--shadow);
   border: 6px solid rgba(0,0,0,.06);
-  margin-top: -10px; /* tweak this to align */
+  box-shadow: 0 18px 45px rgba(0,0,0,.08);
 }
 
 @media (max-width: 980px){
-  .headshot-v2{
+  .headshot{
     width: 260px;
     height: 260px;
-    margin-top: 0;
   }
 }
 
 .hero-right{
-  padding-top: 0px; /* fine-tune alignment with headshot */
+  padding-top: 0; /* keep name aligned with headshot top */
+}
+
+.hero-name{
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px){
+  .hero-name{
+    font-size: 46px;
+    text-align: center;
+  }
+}
+
+/* one-line contact: phone · email · location */
+.hero-contact{
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 980px){
+  .hero-contact{
+    justify-content: center;
+  }
+}
+
+.hero-contact a{
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.hero-contact a:hover{
+  opacity: 0.7;
+}
+
+.hero-dot{
+  opacity: 0.55;
+}
+
+/* NAV PILLS GRID: 3 per row */
+.nav-grid{
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 980px){
+  .nav-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px){
+  .nav-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav-pill{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  font-size: 26px;
+  color: #111;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.nav-pill:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.09);
+}
+
+/* Divider: grey line + subtle shadow */
+.soft-divider{
+  margin: 34px auto 0;
+  width: min(900px, 96%);
+  height: 0.7px;
+  background: rgba(0,0,0,.1);
+  box-shadow: 0 10px 18px rgba(0,0,0,.2);
+  border-radius: 999px;
+}
+
+/* About text (clean) */
+.about-text{
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  font-weight: 400;
+  text-align: justify;
+  text-indent: 18px;
+}
+
+.about-text p{
+  margin: 0 0 10px 0;   /* smaller vertical gap */
+}
+
+@media (max-width: 980px){
+  .about-text{ text-align: left; }
 }
 
 .intro.intro-v2{
@@ -103,12 +219,12 @@
   color: var(--muted);
   max-width: 68ch;
   font-weight: 400;
-  text-align: justify; /* reads better than justify */
+  text-align: justify; 
 }
 
 /* LEFT vertical nav pills */
 .hero-nav{
-  width: min(340px, 100%);
+  width: min(380px, 100%);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -198,7 +314,7 @@
 
     .intro{
       margin: 0;
-      max-width: 62ch;
+      max-width: 1000ch;
       color: var(--muted);
       font-size: 18px;
       font-weight: 400;
@@ -733,6 +849,25 @@
 #backToTop:hover .btn-arrow{
   transform: translateY(-2px);
 }
+
+/* Text highlights */
+.serif-highlight{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.serif-highlight-italic{
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.15em;
+}
+
+.about-text strong{
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
   </style>
 
 <script>
@@ -805,58 +940,99 @@
 <body>
   <div class="wrap">
 
-    <section class="hero hero-v2">
-  <!-- LEFT: photo + nav -->
-  <aside class="hero-left">
-    <img class="headshot headshot-v2"
+    <!-- ===== TOP BLOCK ===== -->
+<section class="hero-top">
+
+  <!-- LEFT: headshot -->
+  <div class="hero-left">
+    <img class="headshot"
          src="assets/yuliacarvalho_headshot.jpg"
          alt="Yulia Carvalho headshot">
+  </div>
 
-    <nav class="hero-nav" aria-label="Page sections">
+  <!-- RIGHT: name + contact line -->
+  <div class="hero-right">
+    <h1 class="hero-name">Yulia Carvalho</h1>
+
+    <div class="hero-contact">
+      <span>(+351) 917784870</span>
+      <span class="hero-dot">·</span>
+      <a href="mailto:your@email.com">yuliya.carvalho@gmail.com</a>
+      <span class="hero-dot">·</span>
+      <span>Lisbon, Portugal</span>
+    </div>
+
+    <!-- NAV PILLS (3 per row) -->
+    <nav class="nav-grid" aria-label="Site navigation">
       <a class="nav-pill" href="#work">Work Experience</a>
       <a class="nav-pill" href="#education">Education</a>
+      <a class="nav-pill" href="#certifications">Licenses</a>
+
       <a class="nav-pill" href="#projects">Projects</a>
       <a class="nav-pill" href="#skills">Skills</a>
-      <a class="nav-pill" href="#achievements">Honors & Awards</a>
-      <a class="nav-pill" href="#publications">Scientific Publications</a>
-      <a class="nav-pill" href="#publications">To add more</a>
-      
+      <a class="nav-pill" href="#achievements">Achievements</a>
+
+      <a class="nav-pill" href="#publications">Publications</a>
+      <a class="nav-pill" href="#contact">Contact</a>
+      <a class="nav-pill" href="#tbd">More</a>
     </nav>
-  </aside>
+  </div>
 
-  <!-- RIGHT: name + about + info -->
-  <div class="hero-right">
-    <h2 class="name">Yulia Carvalho</h2>
+</section>
 
-    <div class="intro intro-v2">
+<div class="soft-divider"></div>
+
+<!-- ===== ABOUT ME ===== -->
+<section id="about" class="section anchor-offset">
+  <h2 class="section-title">About Me</h2>
+  
+  <div class="about-text">
   <p>
-    Hi, I am Yulia. I spent over 15 years as a scientist, building a career grounded in curiosity, rigor, and deep analytical thinking.
+    Hi, I am <span class="serif-highlight-italic">Yulia</span>. I spent over 15 years working across internationally recognized high-impact research environments 
+    and applied biomedical settings, building a career at the intersection of molecular biology, data, and systems thinking. 
+    My work involved experimental design, complex data analysis, scientific publications, and interdisciplinary collaboration.
+  </p>
+ 
+  <p>
+    Over time, my responsibilities expanded beyond research into diagnostic and laboratory operational environments. During and post- COVID-19 pandemic, 
+    I contributed to laboratory testing efforts while also working at the intersection of laboratory logistics for a clinical study, equipment coordination, workflow optimization, 
+    and process coordination. Science increasingly became systems management — understanding how people, processes, data, and infrastructure interact under pressure.
+  </p>
+
+
+  <p>
+    At 37, I made a deliberate and, frankly, quite a courageous decision to transition into the data field — not as a reaction to circumstance, but as a direction I had already 
+    begun to pursue. My interest in data visualization started unexpectedly through watercolor, which led me to think more intentionally about structure, patterns, and clarity. 
+    That curiosity evolved into formal training: I enrolled in the <span class="serif-highlight-italic">Google Data Analytics</span> program while still employed, long before anticipating a layoff.
   </p>
 
   <p>
-    At 37, I made a deliberate and brave decision to transition into the data field — choosing growth over comfort and curiosity over familiarity. It felt like a return to what I truly enjoy: working with complexity, uncovering structure, and making sense of uncertainty.
+    When that transition eventually came, it felt less like disruption and more like alignment. I used the period as a focused investment phase — completing advanced coursework, 
+    an intensive <span class="serif-highlight-italic">Data Analytics bootcamp</span>, and building applied projects. What might have been a pause became acceleration.  
   </p>
 
   <p>
-    I genuinely enjoy digging into messy, imperfect data and doing what I call “forensic EDA” — cleaning, validating assumptions, spotting inconsistencies, and turning chaos into structured data.
+    I genuinely enjoy digging into messy, imperfect data and doing what I call <strong><em>“forensic EDA”</em></strong> — a structured, investigative approach to exploratory analysis.
+For me, analysis begins long before dashboards or models. It starts with questioning the integrity of the data itself: cleaning inconsistencies, validating assumptions, 
+identifying structural anomalies, tracing duplicates, and resolving cross-field conflicts. I approach datasets the way I once approached experiments in the lab — carefully, skeptically, 
+and methodically — until the underlying logic becomes clear. Turning chaos into structured clarity is not just a task; it is the part of the process I enjoy most.
   </p>
 
   <p>
-    Now I apply that same scientific discipline to SQL, Python, R and BI tools, building structured, reliable analytics that drive informed decisions.
+    Today, I focus on Data Analytics and Business Intelligence, working with SQL, Python, R, and modern visualization tools to transform complex datasets into clear, reliable insights.
+I build analytical datasets, define validation rules, design dashboards, and translate numbers into narratives that decision-makers can trust. 
+My goal is not just to produce metrics, but to create analytical frameworks that are transparent, reproducible, and aligned with real business questions. 
+Whether exploring operational systems, performance metrics, or complex multi-source datasets, I aim to combine technical rigor with clarity — delivering insights that are both 
+technically sound and strategically meaningful. 
+
   </p>
 </div>
-
-    <div class="info-grid">
-      <a class="info-pill" href="mailto:yuliya.carvalho@gmail.com">Email: yuliya.carvalho@gmail.com</a>
-      <a class="info-pill" href="tel:+351917784870">Phone: +351 917784870</a>
-      <span class="info-pill">Location: Lisbon, Portugal</span>
-
-      <a class="info-pill" href="https://github.com/YuliyaCarvalho" target="_blank" rel="noopener">GitHub</a>
-      <a class="info-pill" href="https://www.kaggle.com/yuliyacarvalho" target="_blank" rel="noopener">Kaggle</a>
-      <a class="info-pill" href="https://www.linkedin.com/in/yulia-carvalho/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </div>
+  
 </section>
+
+<div class="soft-divider"></div>
+
+
 
     <!-- LICENSES & CERTIFICATIONS -->
 <section id="certifications" class="section anchor-offset">
