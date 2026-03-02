@@ -6,91 +6,65 @@
   <title>Yulia Carvalho | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 
- <!-- Cormorant Garamond + Quicksand -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
+  <!-- FONT: Cormorant Garamond + Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const now = new Date();
+<!-- JS: automatic date updating -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const now = new Date();
 
-    const yearEl = document.getElementById("year");
-    if (yearEl) {
-      yearEl.textContent = now.getFullYear();
-    }
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = now.getFullYear();
 
-    const dateEl = document.getElementById("date");
-    if (dateEl) {
-      dateEl.textContent = now.toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "short",
-        day: "2-digit"
-      });
-    }
-  });
-</script>
-
-
-<!-- Back to top button -->
-<button id="backToTop" type="button" aria-label="Back to top">
-  <span class="btn-text">Back to top</span>
-  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none">
-    <path d="M12 19V5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-    <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const backToTop = document.getElementById("backToTop");
-
-    // show/hide
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) backToTop.classList.add("show");
-      else backToTop.classList.remove("show");
+      const dateEl = document.getElementById("date");
+      if (dateEl) {
+        dateEl.textContent = now.toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+          day: "2-digit"
+        });
+      }
     });
-
-    // click
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  });
-</script>
-
+  </script>
 </head>
+
 <body>
 
+  <!-- BACK TO TOP BUTTON (must be inside body) -->
+  <button id="backToTop" type="button" aria-label="Back to top">
+    <span class="btn-text">Back to top</span>
+    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none">
+      <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
   <header id="home" class="hero-glass">
-  <div class="hero-overlay">
-    <div class="hero-card">
-      <h1 class="hero-title">YULIA CARVALHO</h1>
-      <p class="hero-subtitle">Data Analyst   |   Scientific Researcher</p>
+    <div class="hero-overlay">
+      <div class="hero-card">
+        <h1 class="hero-title">YULIA CARVALHO</h1>
+        <p class="hero-subtitle">Data Analyst | Scientific Researcher</p>
+      </div>
+
+      <div class="hero-contacts">
+        <div><a href="mailto:yuliya.carvalho@gmail.com">yuliya.carvalho@gmail.com</a></div>
+        <div><a href="tel:+351917784870">(+351) 917 784 870</a></div>
+        <div>Lisbon, Portugal</div>
+      </div>
     </div>
+  </header>
 
-    <div class="hero-contacts">
-  <div><a href="mailto:yuliya.carvalho@gmail.com">yuliya.carvalho@gmail.com</a></div>
-  <div><a href="tel:+351917784870">(+351) 917 784 870</a></div>
-  <div>Lisbon, Portugal</div>
-</div>
+  <div class="wrap">
+    <div class="soft-divider"></div>
 
-    
-
-</header>
-
-
-<div class="wrap">
-
-<div class="soft-divider"></div>
-
-<!---------------------- ABOUT ME SECTION ---------------------------------------->
-
-<section id="about" class="section anchor-offset">
-  <h2 class="section-title">About Me</h2>
+    <!-- ABOUT ME -->
+    <section id="about" class="section anchor-offset">
+      <h2 class="section-title">About Me</h2>
   
   <div class="about-text">
   <p>
@@ -104,7 +78,6 @@
     I contributed to laboratory testing efforts while also working at the intersection of laboratory logistics for a clinical study, equipment coordination, workflow optimization, 
     and process coordination. Science increasingly became systems management — understanding how people, processes, data, and infrastructure interact under pressure.
   </p>
-
 
   <p>
     At <span class="serif-highlight-italic">37</span>, I made a deliberate and, frankly, quite a courageous decision to transition into the data field — not as a reaction to circumstance, but as a direction I had already 
@@ -156,13 +129,15 @@ technically sound and strategically meaningful.
 
 <div class="soft-divider"></div>
 
-    <!-- LICENSES & CERTIFICATIONS -->
+    <!--CERTIFICATIONS & TRAINING -->
+
 <section id="certifications" class="section anchor-offset">
-  <h2 class="section-title">Licenses & Certifications</h2>
+  <h2 class="section-title">Certificates & Training</h2>
 
   <div class="cert-list">
 
-    <!-- 1) Google Data Analytics Professional Certificate -->
+    <!-- 1) GOOGLE DA -->
+
 <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">Google Data Analytics Professional Certificate (v.3)</div>
@@ -199,7 +174,8 @@ technically sound and strategically meaningful.
 </div>
     
     
-    <!-- 2) Le Wagon Diploma -->
+    <!-- 2) LE WAGON DIPLOMA -->
+
     <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">Le Wagon Data Analytics Bootcamp</div>
@@ -237,7 +213,8 @@ technically sound and strategically meaningful.
 </div>
 
 
-    <!-- 4) LinkedIn Learning -->
+    <!-- 4) LINKEDIN LEARNNG ETL --> 
+
     <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">ETL in Python and SQL</div>
@@ -276,6 +253,7 @@ technically sound and strategically meaningful.
     
     
 <!-- 3) PRINCE2 -->
+
 <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">PRINCE2 Foundation Certificate in Project Management</div>
@@ -306,6 +284,7 @@ technically sound and strategically meaningful.
 </div>
 
     <!-- 5) IEFP Digital Marketing -->
+
 <div class="cert-item">
   <div class="cert-left">
     <div class="cert-name">Marketing Digital & Plano de Negócio (Criação de PME)</div>
@@ -340,7 +319,7 @@ technically sound and strategically meaningful.
 
 <div class="soft-divider"></div>
 
-    <!-- PROJECTS -->
+    <!--------------- PROJECTS SECTION ----------------------------------------------- -->
 <section id="projects" class="section anchor-offset">
   <h2 class="section-title">Projects</h2>
 
@@ -348,6 +327,7 @@ technically sound and strategically meaningful.
 
 
     <!-- PROJECT: Personal Portfolio -->
+
     <article class="project-card">
   <div class="project-text">
     <h3 class="project-title">Personal Portfolio Website</h3>
@@ -372,6 +352,7 @@ technically sound and strategically meaningful.
 </article>
 
     <!-- PROJECT: PORTUGAL REAL-ESTATE -->
+
     <article class="project-card">
   <div class="project-text">
     <h3 class="project-title">Portugal Property Atlas</h3>
@@ -384,23 +365,26 @@ technically sound and strategically meaningful.
     </div>
 
     <p class="project-desc">
-      A thorough exploration of the Portuguese real estate market based on web-scraped property listings. The project goes beyond standard exploratory analysis by applying a forensic EDA approach — systematically investigating data inconsistencies, structural anomalies, duplicate listings, and cross-field conflicts. Special attention is given to property-type context, recognizing that apartments, houses, land, and commercial assets follow fundamentally different size and reporting conventions. By reconstructing reliable area metrics and validating relationships within each category, the analysis transforms noisy listing data into a structured, analytically sound dataset suitable for modeling and market insights.
+      A structured analysis of the Portuguese real estate market based on web-scraped property listings.
+The project applies a systematic, audit-style exploratory analysis to identify structural inconsistencies, near-duplicate records, and cross-field conflicts. Recognizing that property types follow distinct size and attribute conventions, the dataset was segmented and validated within each category.
+The result is a cleaned, internally consistent dataset suitable for downstream modeling and quantitative market analysis.
     </p>
 
     <!-- bullets hidden by default; shown on hover -->
     <div class="project-extra">
-      <ul class="project-bullets">
-        <li>Identified and resolved structural inconsistencies across property types, reconstructing reliable area metrics</li>
-        <li>Designed validation rules to detect cross-field conflicts and quantified anomaly prevalence</li>
-        <li>Built a cleaned, modeling-ready dataset and documented all transformation logic for reproducibility</li>
-      </ul>
-    </div>
+  <ul class="project-bullets">
+    <li>Developed a structured deduplication strategy to resolve near-duplicate listings across multiple portals, preventing double-counting.</li>
+    <li>Reconstructed reliable area metrics by resolving inconsistent reporting conventions within each property type.</li>
+    <li>Designed rule-based validation checks to detect cross-field conflicts and quantify anomaly prevalence.</li>
+    <li>Documented all transformation logic to ensure full reproducibility and modeling readiness.</li>
+  </ul>
+</div>
 
     <div class="project-actions">
       <a class="project-btn primary"
          href="https://github.com/YuliyaCarvalho/Portugal-Property-Atlas"
          target="_blank" rel="noopener">
-        View Repo
+        View Repository
       </a>
 
       <a class="project-btn"
@@ -419,6 +403,7 @@ technically sound and strategically meaningful.
 
 
     <!-- PROJECT: OLIST -->
+
 <article class="project-card">
   <div class="project-text">
     <h3 class="project-title">Olist: Retention, Logistics & Risk</h3>
@@ -431,16 +416,19 @@ technically sound and strategically meaningful.
     </div>
 
     <p class="project-desc">
-      An end-to-end marketplace operations analysis using the Brazilian Olist dataset. 
-      Designed and answered 18 interconnected business questions spanning growth, retention, delivery performance, freight economics, geographic bottlenecks, and seller risk exposure.
+      A structured operational analysis of the Brazilian Olist marketplace dataset.
+The project applies a multi-layer analytical framework to evaluate customer retention, logistics performance, freight economics, and seller risk exposure. 
+Interconnected business questions were translated into measurable KPIs and validated through cohort analysis and performance segmentation.
+The result is an analytically consistent view of marketplace dynamics, balancing customer experience, operational efficiency, and financial sustainability.
+
     </p>
 
-    <!-- Hidden by default – revealed on hover -->
+    <!-- Olist bullet points hidden by default -> revealed on hover -->
     <div class="project-extra">
       <ul class="project-bullets">
         <li>Built analytical datasets in BigQuery to measure cohort retention, repeat purchase behavior, and lifetime value signals.</li>
         <li>Analyzed delivery latency, freight cost structure, and route performance to identify operational inefficiencies.</li>
-        <li>Applied statistical testing in R to validate hypotheses and avoid biased business conclusions.</li>
+        <li>Applied statistical testing in R to validate hypotheses and reduce bias in business conclusions.</li>
         <li>Delivered actionable insights balancing customer experience, logistics cost, and seller performance risk.</li>
       </ul>
     </div>
@@ -462,6 +450,7 @@ technically sound and strategically meaningful.
 
 
 <!-- PROJECT: BIODIVERSITY LOSS IN EUROPE -->
+
 <article class="project-card">
   <div class="project-text">
     <h3 class="project-title">Biodiversity Loss in Europe</h3>
@@ -484,16 +473,21 @@ technically sound and strategically meaningful.
     </div>
 
     <p class="project-desc">
-      Team-based environmental analytics project examining how land-use distribution and protected area coverage influence the Biodiversity Intactness Index across EU countries.
+      <p class="project-desc">
+  A structured environmental data analysis examining the relationship between land-use patterns, protected area coverage, and the Biodiversity Intactness Index across EU countries. 
+  The project integrates multi-source datasets and applies comparative analysis to identify cross-country structural patterns influencing biodiversity outcomes.
+Team-based project conducted as part of the Le Wagon Data Analytics Bootcamp graduation, with a focus on data integrity, analytical rigor, and clear communication of 
+complex environmental insights.
+</p>
     </p>
 
-    <!-- Hidden by default – revealed on hover -->
+    <!-- Biodiversity bullet points hidden by default – revealed on hover -->
     <div class="project-extra">
       <ul class="project-bullets">
-        <li>Cleaned and integrated multi-source environmental datasets using SQL and Python</li>
-        <li>Performed extensive analysis to evaluate relationships between protected areas and biodiversity outcomes</li>
-        <li>Explored cross-country patterns linking land use types with biodiversity intactness index</li>
-        <li>Designed visualizations and dashboards to communicate conservation effectiveness</li>
+        <li>Developed dashboards and visual outputs to communicate environmental indicators clearly</li>
+        <li>Constructed analytical datasets to evaluate associations between protected area coverage and biodiversity metrics</li>
+        <li>Performed cross-country comparative analysis to identify structural land-use patterns</li>
+        <li>Developed dashboards and visual outputs to communicate environmental indicators clearly</li>
       </ul>
     </div>
 
@@ -517,7 +511,8 @@ technically sound and strategically meaningful.
 
 <div class="soft-divider"></div>
 
-    <!-- WORK EXPERIENCE -->
+    <!------------ WORK EXPERIENCE ------------------------------------------------------------>
+
 <section id="work" class="section anchor-offset">
   <h2 class="section-title">Work Experience</h2>
 
@@ -1008,15 +1003,18 @@ on histone H3–bound lncRNAs, positional conservation, and tissue-specific expr
 </div>
 </section>
 
-<!-- About / Contact -->
-    <section class="card section">
-      <h2>Let's connect!</h2>
-      <p class="muted" style="margin:0">
-        If you're hiring for Junior Data Analyst / BI / Data Engineer / Data Scientist roles, I would love to connect. I am particularly interested in roles that combine
-        data cleaning, KPI design, bla-bla-bla.
-      </p>
-    
-      <footer class="site-footer">
+<!-- Contacts -->
+    <section id="contact" class="card section">
+  <h2>Let's connect!</h2>
+  <p class="muted" style="margin:0">
+    If you're hiring for Junior Data Analyst / BI / Data Engineer / Data Scientist roles, I would love to connect. I am particularly interested in roles that combine
+    data cleaning, KPI design, bla-bla-bla.
+  </p>
+</section>
+
+</div> <!-- CLOSE .wrap -->
+
+<footer class="site-footer">
   <div class="footer-inner">
 
     <div class="footer-left">
@@ -1026,20 +1024,20 @@ on histone H3–bound lncRNAs, positional conservation, and tissue-specific expr
     <div class="footer-center">
       Designed & developed by Yulia Carvalho <br> Deployed via GitHub Pages<br>
       <span class="footer-date">
-  Last updated: <span id="date"></span>
-</span>
+        Last updated: <span id="date"></span>
+      </span>
     </div>
 
     <div class="footer-icons">
-      <a href="https://www.linkedin.com/in/yulia-carvalho/" target="_blank">
+      <a href="https://www.linkedin.com/in/yulia-carvalho/" target="_blank" rel="noopener">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
       </a>
 
-      <a href="https://github.com/YuliyaCarvalho" target="_blank">
+      <a href="https://github.com/YuliyaCarvalho" target="_blank" rel="noopener">
         <img src="https://cdn.simpleicons.org/github/000000" alt="GitHub">
       </a>
 
-      <a href="https://www.kaggle.com/yuliyacarvalho" target="_blank">
+      <a href="https://www.kaggle.com/yuliyacarvalho" target="_blank" rel="noopener">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" alt="Kaggle">
       </a>
     </div>
@@ -1053,9 +1051,10 @@ on histone H3–bound lncRNAs, positional conservation, and tissue-specific expr
   <a class="dock-link" href="#home" data-target="home">Home</a>
   <a class="dock-link" href="#about" data-target="about">About</a>
   <a class="dock-link" href="#projects" data-target="projects">Projects</a>
+  <a class="dock-link" href="#certifications" data-target="certifications">Certificates & Training</a>
   <a class="dock-link" href="#work" data-target="work">Work</a>
-  <a class="dock-link" href="#education" data-target="education">Education</a>
-  <a class="dock-link" href="#contact" data-target="contact">Contact</a>
+  
+  
 
   <!-- OTHER (less frequently used) -->
   <div class="dock-more" id="dockMore">
@@ -1064,10 +1063,12 @@ on histone H3–bound lncRNAs, positional conservation, and tissue-specific expr
     </button>
 
     <div class="dock-menu" role="menu" aria-label="More sections">
-      <a class="dock-link dock-link--menu" href="#certifications" data-target="certifications" role="menuitem">Certificates</a>
+      <a class="dock-link dock-link--menu" href="#education" data-target="education" role="menuitem">Education</a>    
+      
       <a class="dock-link dock-link--menu" href="#skills" data-target="skills" role="menuitem">Skills</a>
       <a class="dock-link dock-link--menu" href="#achievements" data-target="achievements" role="menuitem">Honors & Awards</a>
       <a class="dock-link dock-link--menu" href="#publications" data-target="publications" role="menuitem">Publications</a>
+      <a class="dock-link dock-link--menu" href="#contact" data-target="contact" role="menuitem">Contacts</a>
     </div>
   </div>
 </nav>
@@ -1084,45 +1085,31 @@ document.addEventListener("DOMContentLoaded", () => {
     .filter(Boolean);
 
   function setActive(id){
-    // remove all actives
     allLinks.forEach(a => a.classList.remove("active"));
-
-    // set active on matching link
     const match = allLinks.find(a => a.dataset.target === id);
     if (match) match.classList.add("active");
 
-    // if active is inside menu, highlight "Other"
     const activeIsInMenu = match?.classList.contains("dock-link--menu");
-    if (moreWrap){
-      moreWrap.classList.toggle("has-active", !!activeIsInMenu);
-    }
+    if (moreWrap) moreWrap.classList.toggle("has-active", !!activeIsInMenu);
   }
 
-  // Smooth scroll is handled by your CSS (scroll-behavior: smooth)
   allLinks.forEach(a => {
     a.addEventListener("click", () => {
       setActive(a.dataset.target);
-      // close menu after click
       if (moreWrap) moreWrap.classList.remove("open");
       if (moreBtn) moreBtn.setAttribute("aria-expanded", "false");
     });
   });
 
-  // IntersectionObserver scroll spy
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (visible) setActive(visible.target.id);
-    },
-    { threshold: [0.25, 0.4, 0.55] }
-  );
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) setActive(visible.target.id);
+  }, { threshold: [0.25, 0.4, 0.55] });
 
   sections.forEach(sec => observer.observe(sec));
 
-  // Touch support: click "Other" toggles menu
   if (moreBtn && moreWrap){
     moreBtn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -1130,7 +1117,6 @@ document.addEventListener("DOMContentLoaded", () => {
       moreBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
     });
 
-    // click outside closes menu
     document.addEventListener("click", (e) => {
       if (!moreWrap.contains(e.target)) {
         moreWrap.classList.remove("open");
@@ -1139,8 +1125,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // default
   setActive("home");
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.getElementById("backToTop");
+  if (!backToTop) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) backToTop.classList.add("show");
+    else backToTop.classList.remove("show");
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
 </script>
 
