@@ -1085,7 +1085,7 @@
   padding: 6px 8px;              /* ultra thin */
   border-radius: 999px;
 
-  background: rgba(60,60,60,.55);
+  background: rgba(60, 60, 60, 0.55);
   border: 1px solid rgba(255,255,255,.20);
   box-shadow: 0 10px 28px rgba(0,0,0,.22);
 
@@ -1210,4 +1210,151 @@
 /* optional: prevent bottom content being covered */
 body{
   padding-bottom: 90px;
+}
+
+/* ===== LET'S CONNECT SECTION ===== */
+
+.section-connect{
+  max-width: 1000px;           /* not too wide */
+  margin: 0 auto;             /* center section */
+  padding: 40px 20px 0 20px;
+}
+
+.connect-text{
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #2b2b2b;
+  letter-spacing: 0.2px;
+  text-align: justify;           
+}
+
+/* paragraph spacing */
+.connect-text p{
+  margin: 0 0 18px 0;
+}
+
+/* ===== SKILLS PILLS GRID ===== */
+/* grid that holds pills */
+.skills-grid{
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  overflow: visible; /* IMPORTANT: don't clip popovers */
+}
+
+@media (max-width: 980px){
+  .skills-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .skills-grid{ grid-template-columns: 1fr; }
+}
+
+/* each pill */
+.skill-pill{
+  position: relative;              /* anchor popover */
+  background: #fffcfa;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 14px 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  cursor: default;
+  z-index: 1;                      /* base layer */
+}
+
+/* raise the whole pill above others when active */
+.skill-pill:hover,
+.skill-pill:focus-within{
+  z-index: 50;                     /* IMPORTANT: above the next row */
+}
+
+/* main pill layout (icon left, text right) */
+.pill-main{
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.pill-icon{
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(0,0,0,.04);
+  font-weight: 700;
+}
+
+.pill-name{
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+
+/* the dropdown / hover panel */
+.pill-popover{
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  width: min(340px, 92vw);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.10);
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.14);
+  padding: 12px 12px;
+  z-index: 999;                    /* IMPORTANT */
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+}
+
+/* show it */
+.skill-pill:hover .pill-popover,
+.skill-pill:focus-within .pill-popover{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* popover content */
+.popover-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 8px;
+  border-radius: 10px;
+}
+
+.popover-row:hover{
+  background: rgba(0,0,0,.04);
+}
+
+.popover-icon{
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(0,0,0,.05);
+}
+
+.popover-list{
+  margin: 0;
+  padding-left: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* skills pill icon img always visible + same size */
+.pill-icon img,
+.popover-icon img{
+  width: 22px;
+  height: 22px;
+  display: block;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.2); /* black/white style */
+  opacity: .92;
 }

@@ -416,22 +416,27 @@ The result is a cleaned, internally consistent dataset suitable for downstream m
     </div>
 
     <p class="project-desc">
-      A structured operational analysis of the Brazilian Olist marketplace dataset.
-The project applies a multi-layer analytical framework to evaluate customer retention, logistics performance, freight economics, and seller risk exposure. 
-Interconnected business questions were translated into measurable KPIs and validated through cohort analysis and performance segmentation.
-The result is an analytically consistent view of marketplace dynamics, balancing customer experience, operational efficiency, and financial sustainability.
+      A comprehensive operational analytics study of Brazil’s Olist marketplace, designed to diagnose the structural drivers of customer dissatisfaction, 
+      logistics failure, and seller performance risk.
+      The project integrates SQL-based data engineering with R-driven statistical modeling, applying regression analysis, risk scoring, and route-level segmentation 
+      to uncover the independent effects of delivery delays, freight economics, and operational bottlenecks.
+      The result is a decision-oriented analytical framework quantifying revenue at risk, identifying high-impact geographic corridors, and stratifying seller 
+      performance to support targeted operational interventions.
 
     </p>
 
-    <!-- Olist bullet points hidden by default -> revealed on hover -->
+    <!-- Olist bullet points revealed on hover -->
     <div class="project-extra">
-      <ul class="project-bullets">
-        <li>Built analytical datasets in BigQuery to measure cohort retention, repeat purchase behavior, and lifetime value signals.</li>
-        <li>Analyzed delivery latency, freight cost structure, and route performance to identify operational inefficiencies.</li>
-        <li>Applied statistical testing in R to validate hypotheses and reduce bias in business conclusions.</li>
-        <li>Delivered actionable insights balancing customer experience, logistics cost, and seller performance risk.</li>
-      </ul>
-    </div>
+  <ul class="project-bullets">
+    <li>Built end-to-end analytical datasets in BigQuery integrating transaction, delivery, and review data for multi-layer operational analysis.</li>
+    <li>Validated multiple linear regression models to isolate the independent effects of delay severity, freight cost, and payment structure on review scores.</li>
+    <li>Developed a composite seller risk scoring framework weighting lateness frequency, delay magnitude, and revenue impact.</li>
+    <li>Conducted route-level origin–destination analysis to distinguish seller inefficiencies from systemic infrastructure constraints.</li>
+    <li>Engineered custom diagnostic features (e.g., fulfillment stall indicators and bulk-size classification) to enhance model interpretability.</li>
+    <li>Quantified “Revenue at Risk” to estimate financial exposure driven by dissatisfied customers and evaluate intervention ROI.</li>
+    <li>Implemented interaction regression modeling to test seasonal moderation effects on delivery-related dissatisfaction.</li>
+  </ul>
+</div>
 
     <div class="project-actions">
       <a class="project-btn primary"
@@ -511,7 +516,205 @@ complex environmental insights.
 
 <div class="soft-divider"></div>
 
-    <!------------ WORK EXPERIENCE ------------------------------------------------------------>
+
+    <!-- SKILLS & TECHNICAL TOOLKIT -->
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="section anchor-offset">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <!-- 1) SQL -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon"
+  src="https://api.iconify.design/mdi:database-outline.svg?color=%23000"
+  alt="Database icon">
+      </div>
+      <div class="pill-right">SQL</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">SQL in practice</div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://www.svgrepo.com/show/375551/bigquery.svg" alt="BigQuery">
+          <span>BigQuery</span>
+        </div>
+
+        <ul class="popover-list">
+          <li>CTEs, window functions, cohort tables</li>
+          <li>Validation rules, dedup logic</li>
+          <li>Performance-minded querying</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2) Python -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://cdn.simpleicons.org/python/000000" alt="Python icon">
+      </div>
+      <div class="pill-right">Python</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Libraries</div>
+        <ul class="popover-list">
+          <li>pandas, numpy, modin</li>
+          <li>matplotlib, plotly, seaborn</li>
+          <li>scikit-learn, prophet</li>
+          <li>beautifulsoup</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3) R -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://cdn.simpleicons.org/r/000000" alt="R icon">
+      </div>
+      <div class="pill-right">R</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Libraries</div>
+        <ul class="popover-list">
+          <li>tidyverse (dplyr, tidyr, readr)</li>
+          <li>ggplot2, ggrepel, scales</li>
+          <li>lubridate, broom, car</li>
+          <li>knitr, rmarkdown, DT, kableExtra</li>
+          <li>bigrquery, DBI</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4) Data Viz -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://api.iconify.design/tabler:chart-bar.svg?color=%23000" alt="Power BI icon">
+      </div>
+      <div class="pill-right">Data Viz</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Tools</div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://api.iconify.design/logos:microsoft-power-bi.svg" alt="Power BI">
+          <span>Power BI</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://www.svgrepo.com/show/354012/looker-icon.svg" alt="Looker Studio">
+          <span>Looker Studio</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5) Data Engineering & Warehousing -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://api.iconify.design/mdi:database-cog.svg?color=%23000" alt="Data Engineering">
+      </div>
+      <div class="pill-right">Data Engineering</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Stack</div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://www.svgrepo.com/show/375551/bigquery.svg" alt="BigQuery">
+          <span>BigQuery</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://api.iconify.design/logos:dbt-icon.svg" alt="dbt">
+          <span>dbt</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow">
+          <span>Apache Airflow</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://www.vectorlogo.zone/logos/fivetran/fivetran-icon.svg" alt="Fivetran">
+          <span>Fivetran</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6) Web Fundamentals -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://cdn.simpleicons.org/html5/000000" alt="HTML5 icon">
+      </div>
+      <div class="pill-right">Web Fundamentals</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Portfolio development</div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://cdn.simpleicons.org/html5/000000" alt="HTML5">
+          <span>HTML5 (semantic)</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+          <span>CSS3 (layout, responsive)</span>
+        </div>
+
+        <div class="popover-row">
+          <img class="popover-icon" src="https://cdn.simpleicons.org/githubpages/000000" alt="GitHub Pages">
+          <span>GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7) Workflow -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://cdn.simpleicons.org/git/000000" alt="Git icon">
+      </div>
+      <div class="pill-right">Workflow</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Tools</div>
+        <ul class="popover-list">
+          <li>Git, GitHub, Git Bash</li>
+          <li>VSCode, RStudio</li>
+          <li>Jupyter, Colab, Kaggle</li>
+          <li>Markdown, documentation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8) Automation & Tracking -->
+    <div class="skill-pill has-popover" tabindex="0">
+      <div class="pill-left">
+        <img class="pill-icon" src="https://cdn.simpleicons.org/n8n/000000" alt="Automation">
+      </div>
+      <div class="pill-right">Automation</div>
+
+      <div class="pill-popover">
+        <div class="popover-title">Tools</div>
+        <div class="popover-row">
+          <img class="popover-icon" src="https://cdn.simpleicons.org/googletagmanager" alt="GTM">
+          <span>Google Tag Manager</span>
+        </div>
+        <div class="popover-row">
+          <img class="popover-icon" src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" alt="Zapier">
+          <span>Zapier</span>
+        </div>
+        <div class="popover-row">
+          <img class="popover-icon" src="https://api.iconify.design/tabler:api.svg?color=%23000" alt="APIs">
+          <span>APIs (basic integration)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- WORK EXPERIENCE -->
 
 <section id="work" class="section anchor-offset">
   <h2 class="section-title">Work Experience</h2>
@@ -1003,16 +1206,31 @@ on histone H3–bound lncRNAs, positional conservation, and tissue-specific expr
 </div>
 </section>
 
+
+<div class="soft-divider"></div>
+
+
 <!-- Contacts -->
-    <section id="contact" class="card section">
-  <h2>Let's connect!</h2>
-  <p class="muted" style="margin:0">
-    If you're hiring for Junior Data Analyst / BI / Data Engineer / Data Scientist roles, I would love to connect. I am particularly interested in roles that combine
-    data cleaning, KPI design, bla-bla-bla.
-  </p>
+  
+<section id="contact" class="section section-connect">
+    <h2 class="section-title">Let’s Connect</h2>
+
+    <div class="connect-text">
+    <p> 
+    If you're hiring for Junior Data Analyst, BI, Data Engineer, or Data Scientist roles, I’d be happy to connect. I’m especially interested in opportunities that combine 
+    thoughtful data cleaning, meaningful KPI design, and analytical problem-solving with real-world impact.
+    </p>
+
+    <p> 
+    If you have questions about my projects, ideas for improvement, or just want to talk about data, research, or career paths in analytics, I'd be happy to chat. 
+    I genuinely enjoy exchanging ideas and building meaningful professional connections.
+    </p>
+    </div>
 </section>
 
 </div> <!-- CLOSE .wrap -->
+
+
 
 <footer class="site-footer">
   <div class="footer-inner">
