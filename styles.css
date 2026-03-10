@@ -836,7 +836,7 @@
 .project-card:hover .project-extra{
   max-height: 300px;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-4px) scale(1.01);
 }
 
 #backToTop{
@@ -855,7 +855,7 @@
   border-radius: 900px;
 
   padding: 11px 16px;
-  font-size: 12px;
+  font-size: 11px;
   font-family: "Quicksand";
   font-weight: 400;
 
@@ -865,7 +865,7 @@
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(-50px) scale(1.1);
   transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
   z-index: 9999;
 }
@@ -1106,7 +1106,7 @@
 
   font-family: "Quicksand", sans-serif;
   font-size: 11px;               /* smaller text */
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.2px;
 
   color: rgba(255,255,255,.90);
@@ -1261,21 +1261,19 @@ body{
   box-shadow: 0 8px 22px rgba(0,0,0,.06);
   cursor: default;
   z-index: 1;                      /* base layer */
-}
-
-.skill-pill{
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .pill-left{
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .pill-right{
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: .6px;
 }
 
@@ -1293,14 +1291,15 @@ body{
   align-items: center;
 }
 
+/* pill icon (your HTML uses img.pill-icon) */
 .pill-icon{
   width: 34px;
   height: 34px;
-  display: grid;
-  place-items: center;
+  display: block;
+  object-fit: contain;
   border-radius: 10px;
   background: rgba(0,0,0,.04);
-  font-weight: 700;
+  padding: 6px;
 }
 
 .pill-name{
@@ -1313,7 +1312,8 @@ body{
   position: absolute;
   left: 0;
   top: calc(100% + 10px);
-  width: min(340px, 92vw);
+  width: fit-content;
+  max-width: 92vw;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,.10);
   border-radius: 14px;
@@ -1335,26 +1335,16 @@ body{
   transform: translateY(0);
 }
 
-/* popover content */
-.popover-row{
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 8px 8px;
-  border-radius: 10px;
-}
 
 .popover-row:hover{
   background: rgba(0,0,0,.04);
 }
 
 .popover-icon{
-  width: 26px;
-  height: 26px;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: rgba(0,0,0,.05);
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
 }
 
 .popover-list{
@@ -1364,13 +1354,32 @@ body{
   line-height: 1.6;
 }
 
-/* skills pill icon img always visible + same size */
-.pill-icon img,
-.popover-icon img{
-  width: 22px;
-  height: 22px;
-  display: block;
-  object-fit: contain;
-  filter: grayscale(1) contrast(1.2); /* black/white style */
-  opacity: .92;
+
+/* container for tool icons */
+.popover-tools{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  margin-bottom: 12px;
+}
+
+.popover-tools--inline{
+  display: inline-flex;     /* IMPORTANT: shrink-to-fit */
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;      /* keep on one line */
+}
+
+.popover-tools--inline .tool{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.popover-tools--inline .tool-sep{
+  opacity: .4;
+  font-size: 14px;
+  line-height: 1;
 }
