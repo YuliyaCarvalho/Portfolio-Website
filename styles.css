@@ -65,7 +65,7 @@ a { color: inherit; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   padding: 12px 20px;
   border-radius: 14px;
   background: var(--surface);
@@ -93,12 +93,51 @@ a { color: inherit; }
   animation: pulse 2s ease-in-out infinite;
 }
 
-.status-text-mobile {
-  display: none;
+.status-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .version {
   flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(123,181,134,.18);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(123,181,134,.06);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 14px;
+  }
+
+  .hero-topbar {
+    padding: 10px 12px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .status {
+    flex: 1;
+  }
+
+  .status-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    line-height: 1.35;
+  }
+
+  .version {
+    font-size: 10px;
+  }
 }
 
 @keyframes pulse {
