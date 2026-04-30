@@ -1,1485 +1,1305 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yulia Carvalho | Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT: Cormorant Garamond + Quicksand -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Yulia Carvalho · Data Analyst &amp; Engineer</title>
 
-  
+<link rel="stylesheet" href="styles.css">
 
-<!-- JS: automatic date updating -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const now = new Date();
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = now.getFullYear();
-
-      const dateEl = document.getElementById("date");
-      if (dateEl) {
-        dateEl.textContent = now.toLocaleDateString(undefined, {
-          year: "numeric",
-          month: "short",
-          day: "2-digit"
-        });
-      }
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  });
+</script>
 </head>
-
 <body>
 
-  <!-- BACK TO TOP BUTTON (must be inside body) -->
-  <button id="backToTop" type="button" aria-label="Back to top">
-    <span class="btn-text">Back to top</span>
-    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none">
-      <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+<button id="backToTop" type="button" aria-label="Back to top">
+  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <path d="M6 11L12 5L18 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 
-  <header id="home" class="hero-glass">
-    <div class="hero-overlay">
-      <div class="hero-card">
-        <h1 class="hero-title">YULIA CARVALHO</h1>
-        <p class="hero-subtitle">Data Analyst | Scientific Researcher</p>
+<!-- ============= HERO ============= -->
+<header id="home" class="hero">
+  <div class="hero-topbar">
+    <span class="status">
+      <span class="status-dot"></span>
+    AVAILABLE FOR HIRE → FULL-REMOTE · HYBRID · ON-SITE / LISBON, PT
+    </span>
+    <span class="version">v.2026</span>
+  </div>
+
+  <div class="hero-card">
+    <img class="hero-image" src="assets/yulia-headshot.jpg" alt="Yulia Carvalho">
+    <div class="hero-veil"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="slash">//</span> data analyst &amp; data engineer
+      </div>
+      <h1 class="hero-title">
+        Yulia <span class="serif-italic">Carvalho</span>
+      </h1>
+      <p class="hero-lede">
+        Grounded in scientific rigor, focused on clarity, precision,<br>
+        and a <span class="hero-accent">disciplined approach to complexity</span>
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="mailto:yuliya.carvalho@gmail.com">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/yulia-carvalho/" target="_blank" rel="noopener">LinkedIn ↗</a> 
+        <a class="btn btn-ghost" href="https://github.com/YuliyaCarvalho" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
 
-      <div class="hero-contacts">
-        <div><a href="mailto:yuliya.carvalho@gmail.com">yuliya.carvalho@gmail.com</a></div>
-        <div><a href="tel:+351917784870">(+351) 917 784 870</a></div>
-        <div>Lisbon, Portugal</div>
+      <div class="hero-meta">
+        <span>15+ YRS RESEARCH</span>
+        <span class="dot">·</span>
+        <span>13 PUBLICATIONS</span>
+        <span class="dot">·</span>
+        <span>LISBON, PORTUGAL</span>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <div class="wrap">
-    <div class="soft-divider"></div>
+<main class="wrap">
 
-    <!-- ABOUT ME -->
-    <section id="about" class="section anchor-offset">
-      <h2 class="section-title">About Me</h2>
-  
-  <div class="about-text">
-  <p>
-    Hi, I am <span class="serif-highlight-italic">Yulia</span>. I spent over 15 years working across internationally recognized high-impact research environments 
-    and applied biomedical settings, building a career at the intersection of molecular biology, data, and systems thinking. 
-    My work involved experimental design, complex data analysis, scientific publications, and interdisciplinary collaboration.
-  </p>
- 
-  <p>
-    Over time, my responsibilities expanded beyond research into diagnostic and laboratory operational environments. During and post- COVID-19 pandemic, 
-    I contributed to laboratory testing efforts while also working at the intersection of laboratory logistics for a clinical study, equipment coordination, workflow optimization, 
-    and process coordination. Science increasingly became systems management — understanding how people, processes, data, and infrastructure interact under pressure.
-  </p>
 
-  <p>
-    At <span class="serif-highlight-italic">37</span>, I made a deliberate and, frankly, quite a courageous decision to transition into the data field — not as a reaction to circumstance, but as a direction I had already 
-    begun to pursue. My interest in data visualization started unexpectedly through watercolor, which led me to think more intentionally about structure, patterns, and clarity. 
-    That curiosity evolved into formal training: I enrolled in the <span class="serif-highlight-italic">Google Data Analytics</span> program while still employed, long before anticipating a layoff.
-  </p>
+<div class="web-divider" aria-hidden="true"></div>
 
-  <p>
-    When that transition eventually came, it felt less like disruption and more like alignment. I used the period as a focused investment phase — completing advanced coursework, 
-    an intensive <span class="serif-highlight-italic">Data Analytics bootcamp</span>, and building applied projects. What might have been a pause became acceleration.  
-  </p>
+  <!-- ============= ABOUT ============= -->
+  <section id="about" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 01 - about</div>
+      <h2 class="section-title">A scientist&rsquo;s <span class="serif-italic">analyst</span>.</h2>
+    </div>
 
-  <p>
-    I genuinely enjoy digging into messy, imperfect data and doing what I call <strong><em>“forensic EDA”</em></strong> — a structured, investigative approach to exploratory analysis.
-For me, analysis begins long before dashboards or models. It starts with questioning the integrity of the data itself: cleaning inconsistencies, validating assumptions, 
-identifying structural anomalies, tracing duplicates, and resolving cross-field conflicts. I approach datasets the way I once approached experiments in the lab — carefully, skeptically, 
-and methodically — until the underlying logic becomes clear. Turning chaos into structured clarity is not just a task; it is the part of the process I enjoy most.
-  </p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Hi, I am <span class="serif-italic">Yulia</span>. I spent over fifteen years in internationally recognized research environments and applied biomedical settings -
+          building a career at the intersection of molecular biology, data, and systems thinking.
+          My work spanned experimental design, complex data analysis, scientific publications, documentation and interdisciplinary collaboration.
+        </p>
+        <p>
+          During and after the COVID-19 pandemic, my responsibilities expanded into laboratory operations and clinical-study logistics - equipment coordination, workflow
+          optimization, process design under pressure. Science increasingly became <em>systems management</em>: understanding how people, processes, data, and
+          infrastructure interact when reliability matters.
+        </p>
+        <p>
+          At <span class="serif-italic">37</span>, I made a deliberate transition into the Data field. My curiosity about visualization (oddly, through watercolor) led me to formal
+          training: I enrolled in the <strong>Google Data Analytics</strong> program while still employed, later completed an intensive <strong>Le Wagon Data Analytics bootcamp</strong>,
+          and built applied projects focused on cleaning, modeling, documenting and transforming raw data into usable analytical outputs.
+        </p>
+        <p>
+          What I enjoy most is what I call <em>&ldquo;forensic EDA&rdquo;</em> - a structured, investigative approach to exploratory analysis. For me, analysis starts before dashboards 
+          or models. It starts with questioning the integrity of the data itself: cleaning inconsistencies, validating assumptions, identifying anomalies, resolving cross-field conflicts, 
+          and tracing how raw data becomes reliable analysis.  
+        </p>
+        <p>
+          I am especially drawn to the engineering side of analytics: building reproducible workflows, defining clear data logic, preparing BI-ready datasets, and documenting pipelines, 
+          transformations, and metrics so they can be trusted. I approach datasets the way I once approached experiments - skeptically, methodically, and with respect for the underlying system - until the logic becomes clear.
+        </p>
+      </div>
 
-  <p>
-    Today, I focus on Data Analytics and Business Intelligence, working with SQL, Python, R, and modern visualization tools to transform complex datasets into clear, reliable insights.
-I build analytical datasets, define validation rules, design dashboards, and translate numbers into narratives that decision-makers can trust. 
-My goal is not just to produce metrics, but to create analytical frameworks that are transparent, reproducible, and aligned with real business questions. 
-Whether exploring operational systems, performance metrics, or complex multi-source datasets, I aim to combine technical rigor with clarity — delivering insights that are both 
-technically sound and strategically meaningful. 
+      <aside class="about-facts">
+        <div class="facts-title">// at a glance</div>
+        <dl class="facts-list">
+          <div class="fact"><dt>Based in</dt><dd>Lisbon, Portugal</dd></div>
+          <div class="fact"><dt>Years in research</dt><dd>15+</dd></div>
+          <div class="fact"><dt>Peer-reviewed papers</dt><dd>13 published</dd></div>
+          <div class="fact"><dt>Languages</dt><dd>EN · PT · RU</dd></div>
+          <div class="fact"><dt>Open to</dt><dd>On-site (Lisbon) · Hybrid · Remote</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
 
-  </p>
-</div>
-  
+  <div class="web-divider" aria-hidden="true"></div>
+
+<!-- ============= PROJECTS ============= -->
+<section id="projects" class="section anchor-offset">
+  <div class="section-head">
+    <div class="section-eyebrow">// 02 - selected projects</div>
+    <h2 class="section-title">What I&rsquo;ve been <span class="serif-italic">building.</span></h2>
+  </div>
+
+  <div class="projects-list">
+
+    <!-- PORTFOLIO -->
+    <article class="project-card project-card--simple" id="proj-portfolio">
+      <div class="project-text">
+        <div class="project-tagline">
+          <span class="tag tag-accent">FRONT-END</span>
+          <span class="tag-meta">APRIL 2026</span>
+        </div>
+
+        <h3 class="project-title">
+          Personal <span class="serif-italic">Portfolio</span> Website
+        </h3>
+
+        <div class="project-chips">
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS3</span>
+          <span class="chip">Git &amp; GitHub Pages</span>
+        </div>
+
+        <p class="project-desc">
+          Designed and deployed a personal portfolio site from scratch using HTML, CSS, and GitHub Pages -
+          focused on typographic hierarchy, responsive layout, and a recruiter-friendly information architecture.
+        </p>
+
+        <p class="project-desc">
+          Iteratively refined the visual design, spacing, and responsive layout.
+        </p>
+
+        <div class="project-actions">
+          <a class="action action-light"
+             href="https://github.com/YuliyaCarvalho/Portfolio-Website"
+             target="_blank"
+             rel="noopener">Repository ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- OLIST -->
+    <article class="project-card" id="proj-olist">
+      <div class="project-text">
+        <div class="project-tagline">
+          <span class="tag tag-accent">OPERATIONS ANALYTICS</span>
+          <span class="tag-meta">DEC 2025 - JAN 2026</span>
+        </div>
+
+        <h3 class="project-title">
+          Olist: Retention, Logistics &amp; <span class="serif-italic">Risk</span>
+        </h3>
+
+        <p class="project-collab">
+          Capstone for the <strong>Google Data Analytics</strong> Professional Certificate
+        </p>
+
+        <div class="project-chips">
+          <span class="chip">SQL · BigQuery</span>
+          <span class="chip">R</span>
+          <span class="chip">Kaggle</span>
+        </div>
+
+        <p class="project-desc">
+          A comprehensive operational analytics study of Brazil's Olist marketplace -
+          diagnosing the structural drivers of customer dissatisfaction, logistics failure,
+          and seller performance risk. Integrates SQL data engineering with R-driven
+          statistical modeling: regression analysis, risk scoring, and route-level
+          segmentation.
+        </p>
+
+        <div class="project-stats">
+          <div class="pstat">
+            <div class="pv">100K+</div>
+            <div class="pl">orders analyzed</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">18</div>
+            <div class="pl">business questions</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">1</div>
+            <div class="pl">dashboard</div>
+          </div>
+        </div>
+
+        <div class="project-extra">
+          <ul class="project-bullets">
+            <li>
+              Integrated Multi-Source Analytical Pipeline: Developed an end-to-end data pipeline connecting cloud-based
+              warehousing to a statistical environment, integrating transaction, logistics, and sentiment data into a
+              unified layer for advanced modeling.
+            </li>
+            <li>
+              Validated Predictive Satisfaction Models: Applied multiple linear regression models to isolate the drivers
+              of customer satisfaction, establishing delivery delay as the dominant predictor while evaluating the relative
+              insignificance of other factors.
+            </li>
+            <li>
+              Strategic Seller Risk Framework: Engineered a composite risk scoring system that prioritizes accounts for
+              intervention by weighing historical lateness, delay severity, and total business value at risk.
+            </li>
+            <li>
+              Geographic Infrastructure Diagnostics: Conducted origin–destination route analysis to distinguish between
+              individual seller inefficiencies and systemic regional logistics constraints, identifying high-impact
+              corridors that require infrastructure optimization.
+            </li>
+            <li>
+              Advanced Feature Engineering: Developed diagnostic indicators, including category-relative fulfillment
+              benchmarks and volumetric classifications, to capture the handling complexity and physical realities of
+              marketplace logistics.
+            </li>
+            <li>
+              Quantified Business Exposure: Established a framework to link poor customer reviews with financial risk,
+              providing a data-driven basis for calculating the return on investment for operational improvements.
+            </li>
+            <li>
+              Seasonal Moderation Modeling: Implemented interaction regression models to analyze how holiday periods
+              influence customer expectations, measuring the degree to which seasonal shopping events amplify the
+              negative impact of delivery delays.
+            </li>
+            <li>
+              Rigorous Data Modeling Protocols: Implemented strict granularity controls throughout the analysis to ensure
+              there are no potential statistical distortions in multi-item transactions.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-actions">
+          <a class="action action-dark"
+             href="https://www.kaggle.com/code/yuliyacarvalho/olist-retention-logistics-risk"
+             target="_blank"
+             rel="noopener">View Notebook ↗</a>
+          <a class="action action-light"
+             href="https://github.com/YuliyaCarvalho/olist-marketplace-analysis"
+             target="_blank"
+             rel="noopener">Repository ↗</a>
+          <a class="action action-accent"
+             href="https://github.com/YuliyaCarvalho/olist-marketplace-analysis#dashboard"
+             target="_blank"
+             rel="noopener">Dashboard ↗</a>
+        </div>
+      </div>
+
+      <div class="project-media">
+        <img src="assets/olist-cover.png" alt="Olist project cover - shipping route map">
+        <div class="media-caption">
+          <span class="google-da-mark">GOOGLE&nbsp;DATA ANALYTICS</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- BIODIVERSITY -->
+    <article class="project-card" id="proj-bio">
+      <div class="project-text">
+        <div class="project-tagline">
+          <span class="tag tag-accent">ENVIRONMENTAL ANALYTICS</span>
+          <span class="tag-meta">NOV 2025</span>
+        </div>
+
+        <h3 class="project-title">
+          Biodiversity Loss in <span class="serif-italic">Europe</span>
+        </h3>
+
+        <p class="project-collab">
+          Graduation project for the <strong>Le Wagon Data Analytics Bootcamp</strong>
+        </p>
+
+        <p class="project-collab">
+          In collaboration with
+          <a href="https://www.linkedin.com/in/pascal-nissing-management-and-sustainability/"
+             target="_blank"
+             rel="noopener">Pascal Niessing</a> and Clara Martin Santasusana
+        </p>
+
+        <div class="project-chips">
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Google Colab</span>
+          <span class="chip">Looker Studio</span>
+        </div>
+
+        <p class="project-desc">
+          A structured environmental data analysis examining the relationship between
+          land-use patterns, protected-area coverage, and the Biodiversity Intactness Index
+          across EU countries. Integrates multi-source datasets and applies comparative
+          analysis to identify cross-country structural patterns influencing biodiversity
+          outcomes.
+        </p>
+
+        <div class="project-stats">
+          <div class="pstat">
+            <div class="pv">27</div>
+            <div class="pl">EU countries</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">5</div>
+            <div class="pl">data sources</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">1</div>
+            <div class="pl">team graduation project</div>
+          </div>
+        </div>
+
+        <div class="project-extra">
+          <ul class="project-bullets">
+            <li>
+              Multi-Source Environmental Modeling: Integrated land-use, protected-area, and biodiversity datasets into
+              a unified analytical framework for cross-country evaluation.
+            </li>
+            <li>
+              Structural Pattern Comparison: Examined how differences in land-use composition and conservation coverage
+              relate to biodiversity intactness, identifying recurring patterns across EU countries.
+            </li>
+            <li>
+              Dashboard-Based Communication: Built Looker Studio dashboards to present environmental indicators clearly
+              and support technical discussion of the findings.
+            </li>
+            <li>
+              Reproducible Data Documentation: Maintained clear methodology and data lineage to support transparency,
+              traceability, and reproducibility.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-actions">
+          <a class="action action-dark"
+             href="https://lookerstudio.google.com/u/0/reporting/5b86cf95-3949-4853-8f3d-2f888cea8c9d/page/p_y00jcbklxd"
+             target="_blank"
+             rel="noopener">View Report ↗</a>
+        </div>
+      </div>
+
+      <div class="project-media">
+        <img src="assets/biodiversity-cover.png" alt="Biodiversity project cover">
+        <div class="media-caption">
+          <span class="lewagon-mark">LE&nbsp;WAGON</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
 </section>
 
-<div class="soft-divider"></div>
+<div class="web-divider" aria-hidden="true"></div>
 
+  <!-- ============= SKILLS ============= -->
+<section id="skills" class="section anchor-offset">
+  <div class="section-head row">
+    <div>
+      <div class="section-eyebrow">// 03 - toolkit</div>
+      <h2 class="section-title">The <span class="serif-italic">toolkit.</span></h2>
+    </div>
+    <div class="head-meta">6 GROUPS</div>
+  </div>
+
+  <div id="skills-grid" class="skills-grid">
+
+    <!-- Languages -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">⌥</span>
+        <span class="sg-name">Languages</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2">
+              <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+              <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"></path>
+              <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"></path>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">SQL</span>
+            <span class="sg-sub">CTEs · window functions · validation</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Python</span>
+            <span class="sg-sub">data analysis · basic scripting</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="R" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">R</span>
+            <span class="sg-sub">analysis · reporting</span>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <!-- Data Engineering -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">❑</span>
+        <span class="sg-name">Data Engineering</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="BigQuery" src="https://cdn.simpleicons.org/googlebigquery/4285F4">
+          </span>
+          <div>
+            <span class="sg-label">BigQuery</span>
+            <span class="sg-sub">warehouse SQL · cost-aware queries</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="#FF694A">
+              <path d="M22 5l-3 3-3-3 3-3 3 3zM2 19l3-3 3 3-3 3-3-3zm12-12l-3 3 3 3 3-3-3-3zm-6 6l-3 3 3 3 3-3-3-3z"></path>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">dbt</span>
+            <span class="sg-sub">data modeling (raw → staging → marts)</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Airflow" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Airflow</span>
+            <span class="sg-sub">orchestration concepts · DAGs</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="#0073E5">
+              <path d="M12 2 L22 7 L22 17 L12 22 L2 17 L2 7 Z"></path>
+              <circle cx="12" cy="12" r="3" fill="#fff"></circle>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">Fivetran</span>
+            <span class="sg-sub">ELT pipeline concepts</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" fill="#FFF000"></circle>
+              <circle cx="14.5" cy="9.5" r="1.6" fill="#000"></circle>
+              <path d="M22 13c-2 .8-4 1-6 1" stroke="#000" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">DuckDB</span>
+            <span class="sg-sub">local analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis Libraries -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">λ</span>
+        <span class="sg-name">Analysis Libraries</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="pandas" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">pandas</span>
+            <span class="sg-sub">data wrangling & transformation</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="numpy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">NumPy</span>
+            <span class="sg-sub">numerical operations</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="#5946e5">
+              <circle cx="12" cy="12" r="10" fill="#5946e5"></circle>
+              <text x="12" y="16" font-size="10" fill="#fff" font-weight="700" text-anchor="middle">BS</text>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">BeautifulSoup</span>
+            <span class="sg-sub">basic web scraping</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="R" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">tidyverse · lubridate</span>
+            <span class="sg-sub">data manipulation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics & Modeling -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">Σ</span>
+        <span class="sg-name">Statistics &amp; Modeling</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#5946e5" stroke-width="2">
+              <path d="M3 3v18h18"></path>
+              <path d="M7 14l3-3 3 3 5-5"></path>
+              <circle cx="7" cy="14" r="1.5" fill="#5946e5"></circle>
+              <circle cx="13" cy="14" r="1.5" fill="#5946e5"></circle>
+              <circle cx="18" cy="9" r="1.5" fill="#5946e5"></circle>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">Statistical analysis</span>
+            <span class="sg-sub">regression · hypothesis testing · diagnostics</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="scikit-learn" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">scikit-learn</span>
+            <span class="sg-sub">regression, classification, model evaluation</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#306998" stroke-width="2">
+              <path d="M3 18l5-5 4 4 9-9"></path>
+              <circle cx="3" cy="18" r="1.5" fill="#306998"></circle>
+              <circle cx="8" cy="13" r="1.5" fill="#FFD43B" stroke="#FFD43B"></circle>
+              <circle cx="12" cy="17" r="1.5" fill="#306998"></circle>
+              <circle cx="21" cy="8" r="1.5" fill="#FFD43B" stroke="#FFD43B"></circle>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">Prophet</span>
+            <span class="sg-sub">time series forecasting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visualization & BI -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">◐</span>
+        <span class="sg-name">Visualization &amp; BI</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Power BI" src="https://img.icons8.com/color/48/power-bi.png">
+          </span>
+          <div>
+            <span class="sg-label">Power BI</span>
+            <span class="sg-sub">dashboards · DAX · modeling</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Looker Studio" src="https://cdn.simpleicons.org/looker/4285F4">
+          </span>
+          <div>
+            <span class="sg-label">Looker Studio</span>
+            <span class="sg-sub">reporting dashboards</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="matplotlib" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">matplotlib · seaborn</span>
+            <span class="sg-sub">static visualizations</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Plotly" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/plotly/plotly-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Plotly</span>
+            <span class="sg-sub">interactive charts</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <svg viewBox="0 0 24 24" fill="#1A1A1A">
+              <circle cx="12" cy="12" r="11" fill="#1F75CB"></circle>
+              <text x="12" y="16" font-size="9" fill="#fff" font-weight="700" text-anchor="middle">gg</text>
+            </svg>
+          </span>
+          <div>
+            <span class="sg-label">ggplot2</span>
+            <span class="sg-sub">visual analysis in R</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Workflow & Tools -->
+    <div class="skill-group">
+      <div class="sg-head">
+        <span class="sg-glyph">↻</span>
+        <span class="sg-name">Workflow &amp; Tools</span>
+      </div>
+
+      <div class="sg-list">
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Git</span>
+            <span class="sg-sub">version control</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">GitHub</span>
+            <span class="sg-sub">repositories · project publishing</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="VS Code" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">VS Code · RStudio</span>
+            <span class="sg-sub">development environments</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Jupyter" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Jupyter · Colab</span>
+            <span class="sg-sub">interactive notebooks for analysis</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Kaggle" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">Kaggle</span>
+            <span class="sg-sub">published projects and experimentation</span>
+          </div>
+        </div>
+
+        <div class="sg-item">
+          <span class="sg-icon">
+            <img alt="Bash" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg">
+          </span>
+          <div>
+            <span class="sg-label">CLI · Bash</span>
+            <span class="sg-sub">terminal workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= EXPERIENCE ============= -->
+  <section id="work" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 04 - experience</div>
+      <h2 class="section-title">Where I&rsquo;ve <span class="serif-italic">worked.</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <!-- Self-employed -->
+      <div class="work-item is-current">
+        <div class="work-date">
+          <div class="date-range">Nov 2025 - Present</div>
+          <div class="job-location">Lisbon, PT · remote</div>
+          <div class="job-duration">6 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Data Analytics &amp; BI <span class="job-em">- Self-Directed Projects</span></div>
+          <div class="job-company">Self-employed</div>
+          <div class="job-department">Independent Data Analyst - end-to-end analytics, portfolio development, applied upskilling in SQL, Python, R, Power BI, and ETL tools.</div>
+          <ul class="job-list">
+            <li>Built end-to-end analytics projects covering data cleaning, validation, exploratory analysis, metric design, dashboard development, and business insight generation.</li>
+            <li>Developed a detailed e-commerce analytics project structured around 18 interconnected business questions across customer behavior, logistics, operations, and retention.</li>
+            <li>Created reproducible analytical workflows in Kaggle and GitHub, with strong emphasis on documentation, data quality, and transparent business logic.</li>
+            <li>Designed Power BI dashboards and supporting metric documentation to translate complex analysis into clear, decision-oriented reporting.</li>
+            <li>Continued formal upskilling through the Google Data Analytics Certificate and Le Wagon Data Analytics Bootcamp.</li>
+            <li>Developed and launched a personal portfolio website hosted on GitHub Pages to present projects, technical skills, and professional background.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Laboratory Data Manager -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Oct 2024 - Feb 2025</div>
+          <div class="job-location">Lisbon, PT · on-site</div>
+          <div class="job-duration">5 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Laboratory Data Manager</div>
+          <div class="job-company">GIMM - Gulbenkian Institute for Molecular Medicine</div>
+          <div class="job-department">Mission Lab</div>
+          <ul class="job-list">
+            <li>Owned laboratory quality assurance - improving workflow structure, data traceability, and documentation standards through SOP creation and process guidance.</li>
+            <li>Participated in the implementation and configuration of a <strong>LIMS</strong> tailored to laboratory needs - defining required sections, records, and operational data structures.</li>
+            <li>Migrated legacy laboratory records into the LIMS, including Excel trackers, equipment maintenance logs, and related operational data.</li>
+            <li>Authored the SOP for LIMS use to standardize system adoption, data handling, and operational consistency across the lab.</li>
+            <li>Applied data-driven resource tracking to monitor consumable usage, forecast needs, optimize inventory, and reduce waste.</li>
+            <li>Managed core lab operations - equipment maintenance, supplier coordination, and safety compliance - supported by structured logs and monitoring.</li>
+            <li>Coordinated biological sample inflow, processing, and logistics, ensuring accurate registration, tracking, and reporting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- COVID-19 Diagnostic Specialist -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Nov 2020 - Mar 2023</div>
+          <div class="job-location">Lisbon, PT · on-site</div>
+          <div class="job-duration">2 yrs 5 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">COVID-19 Diagnostic Specialist</div>
+          <div class="job-company">iMM - Instituto de Medicina Molecular</div>
+          <div class="job-department">COVID-19 Molecular Diagnostic Unit</div>
+          <ul class="job-list">
+            <li>Managed the planning, coordination, and execution of <strong>200,000+ COVID-19 diagnostic tests</strong> under enhanced BSL-II conditions, ensuring accurate tracking, prioritization, and timely reporting.</li>
+            <li>Performed qPCR result analysis and prepared structured reports for patients and external entities with strong focus on data accuracy, completeness, and traceability.</li>
+            <li>Contributed to the design and optimization of laboratory protocols by calculating minimum tolerances, analyzing consumable usage patterns, and streamlining workflows - reducing cost without compromising diagnostic quality.</li>
+            <li>Applied domain knowledge, basic statistics, and digital tools to validate and maintain SINAVE data, ensuring data integrity, consistency, and up-to-date records for surveillance and reporting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Research Fellow -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Oct 2018 - Nov 2020</div>
+          <div class="job-location">Lisbon, PT · on-site</div>
+          <div class="job-duration">2 yrs 2 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Research Fellow</div>
+          <div class="job-company">iMM - Instituto de Medicina Molecular</div>
+          <div class="job-department">Vascular Morphogenesis Laboratory</div>
+          <ul class="job-list">
+            <li>Oversaw lab management and maintenance while supporting molecular cloning, virus production, and mouse colony genotyping - ensuring documentation, traceability, and protocol compliance.</li>
+            <li>Collected, organized, and analyzed experimental data from confocal microscopy and molecular assays, using spreadsheets and image-analysis tools to quantify results, assess variability, and support statistically sound conclusions.</li>
+            <li>Contributed to individual scientific projects and collaborated with PhD students and postdocs - helping design experiments, interpret data, and troubleshoot protocols based on quantitative readouts and controls.</li>
+            <li>Helped prepare figures, datasets, and method descriptions for internal reports, presentations, and publications, reinforcing a rigorous, reproducible, and data-driven approach.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Goethe -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Nov 2012 - Jan 2017</div>
+          <div class="job-location">Frankfurt, DE · on-site</div>
+          <div class="job-duration">4 yrs 3 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Scientific Researcher / PhD Student</div>
+          <div class="job-company">Institute of Cardiovascular Regeneration, Goethe University</div>
+          <div class="job-department">Center for Molecular Medicine</div>
+          <p class="job-context">
+            <strong>Project I:</strong> &ldquo;Epigenetics of stem cells: uncovering the role of noncoding RNAs&rdquo; - identification and characterization of histone-H3-bound long noncoding RNAs in mouse stem cells.<br>
+            <strong>Project II:</strong> &ldquo;Identification and characterization of long noncoding RNAs in murine heart&rdquo; - screening for positionally-conserved heart-expressed, -enriched or -specific lncRNAs and their molecular and functional characterization.
+          </p>
+          <ul class="job-list">
+            <li>Handled large, complex sequencing and microarray datasets, integrating multiple experimental readouts.</li>
+            <li>Applied statistical methods to assess significance, validate findings, and interpret high-dimensional data in a robust, reproducible way.</li>
+            <li>Prepared and delivered presentations at scientific conferences and internal meetings, clearly communicating complex results, methods, and limitations to diverse audiences.</li>
+            <li>Contributed to peer-reviewed publications by designing and performing experiments, analyzing data, and documenting results - reinforcing a rigorous, evidence-based, data-driven research approach.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Max Planck -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Nov 2011 - Oct 2012</div>
+          <div class="job-location">Bad Nauheim, DE · on-site</div>
+          <div class="job-duration">1 yr</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Invited PhD Student Researcher</div>
+          <div class="job-company">Max Planck Institute for Heart and Lung Research</div>
+          <div class="job-department">Department of Cardiac Development and Remodeling</div>
+          <ul class="job-list">
+            <li>Researched lncRNAs in embryonic stem cells; performed global transcriptome analysis during cardiac differentiation.</li>
+            <li>Co-authored a paper in <em>Nucleic Acids Research</em> (2012) on &ldquo;Noncoder,&rdquo; a web interface for exon-array detection of lncRNAs.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Probiomed -->
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Nov 2010 - Aug 2011</div>
+          <div class="job-location">Tenancingo, MX · on-site</div>
+          <div class="job-duration">10 mos</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">R&amp;D Technician</div>
+          <div class="job-company">Probiomed S.A. de C.V.</div>
+          <div class="job-department">NL Biotechnologies LLC</div>
+          <ul class="job-list">
+            <li>Recombinant viral hepatitis vaccine development.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= EDUCATION ============= -->
+  <section id="education" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 05 - education</div>
+      <h2 class="section-title">Foundations.</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Sep 2005 - Jul 2010</div>
+          <div class="job-location">Kazan, RU</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">MSc - Molecular Biology / Microbiology</div>
+          <div class="job-company edu-school">Kazan Federal University</div>
+        </div>
+      </div>
+
+      <div class="work-item">
+        <div class="work-date">
+          <div class="date-range">Oct 2008 - May 2010</div>
+          <div class="job-location">Kazan, RU</div>
+        </div>
+        <div class="work-content">
+          <div class="job-title">Diploma - Psychology</div>
+          <div class="job-company edu-school">Kazan Federal University</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= CERTIFICATES ============= -->
+  <section id="certifications" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 06 - certificates &amp; training</div>
+      <h2 class="section-title">Continuous <span class="serif-italic">learning.</span></h2>
+    </div>
+
+    <div class="cert-list">
+
+      <div class="cert-item cert-item--featured">
+        <div class="cert-left">
+          <div class="cert-name">Google Data Analytics Professional Certificate <span class="cert-vsn">v.3</span></div>
+          <div class="cert-issuer"><span class="cert-issuer-name">Google · Coursera</span></div>
+          <div class="cert-meta">Issued <span class="cert-date">Jan 2026</span></div>
+        </div>
+        <div class="cert-actions">
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn secondary" href="certificates/google-data-analytics-preview.png" target="_blank" rel="noopener">View PDF</a>
+            <div class="cert-preview"><img src="certificates/google-data-analytics-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+          <a class="cert-btn primary" href="https://www.credly.com/badges/4eab55e0-8792-4067-960f-beebc7379644/linked_in_profile" target="_blank" rel="noopener">Show credential ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-item cert-item--featured">
+        <div class="cert-left">
+          <div class="cert-name">Le Wagon Data Analytics Bootcamp <span class="cert-pill cert-pill--accent">DGERT-certified</span></div>
+          <div class="cert-issuer"><span class="cert-issuer-name">Le Wagon</span></div>
+          <div class="cert-meta">Issued <span class="cert-date">Nov 2025</span></div>
+        </div>
+        <div class="cert-actions">
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn secondary" href="certificates/le-wagon-diploma-preview.png" target="_blank" rel="noopener">View PDF</a>
+            <div class="cert-preview"><img src="certificates/le-wagon-diploma-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn accent" href="certificates/le-wagon-dgert-certified.pdf" target="_blank" rel="noopener">DGERT PDF</a>
+            <div class="cert-preview"><img src="certificates/le-wagon-dgert-certified-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+          <a class="cert-btn primary" href="https://kitt.lewagon.com/schoolings/48065/public_diploma?token=d5f67fbb1706d705eff404c66eb0345103112d629fc2987ed0a70de1c15a4c81" target="_blank" rel="noopener">Show credential ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">PRINCE2 Foundation Certificate in Project Management</div>
+          <div class="cert-issuer"><span class="cert-issuer-name">PeopleCert® / AXELOS Global Best Practice</span></div>
+          <div class="cert-meta">Issued <span class="cert-date">Jan 2024</span></div>
+        </div>
+        <div class="cert-actions">
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn secondary" href="certificates/prince2-preview.png" target="_blank" rel="noopener">View PDF</a>
+            <div class="cert-preview"><img src="certificates/prince2-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">ETL in Python and SQL</div>
+          <div class="cert-issuer"><span class="cert-issuer-name">LinkedIn Learning</span></div>
+          <div class="cert-meta">Issued <span class="cert-date">Feb 2026</span> · course completion</div>
+        </div>
+        <div class="cert-actions">
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn secondary" href="certificates/etl-in-python-sql-preview.png" target="_blank" rel="noopener">View PDF</a>
+            <div class="cert-preview"><img src="certificates/etl-in-python-sql-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+          <a class="cert-btn primary" href="https://www.linkedin.com/learning/certificates/378903cf923e8d29949a1a4b027131ee2f5ce935a019cf69ad870710f4070618?trk=share_certificate" target="_blank" rel="noopener">Show credential ↗</a>
+        </div>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <div class="cert-name">Marketing Digital &amp; Plano de Negócio (PME)</div>
+          <div class="cert-issuer"><span class="cert-issuer-name">IEFP - Instituto do Emprego e Formação Profissional</span></div>
+          <div class="cert-meta">Issued <span class="cert-date">Jul 2025</span> · course completion</div>
+        </div>
+        <div class="cert-actions">
+          <div class="cert-preview-wrapper">
+            <a class="cert-btn secondary" href="certificates/iefp-digital-marketing-preview.png" target="_blank" rel="noopener">View PDF</a>
+            <div class="cert-preview"><img src="certificates/iefp-digital-marketing-preview.png" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= PUBLICATIONS ============= -->
+  <section id="publications" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 07 - publications</div>
+      <h2 class="section-title">Peer-reviewed <span class="serif-italic">work.</span></h2>
+    </div>
+
+    <div class="pub-list">
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">A non-genetic model of vascular shunts informs on the cellular mechanisms of formation and resolution of arteriovenous malformations</h3>
+      <p class="pub-meta">Cardiovascular Research · Sep 2024</p>
+    </div>
+    <a class="pub-btn" href="https://academic.oup.com/cardiovascres/article/120/15/1967/7764578" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Competition for endothelial cell polarity drives vascular morphogenesis in the mouse retina</h3>
+      <p class="pub-meta">Developmental Cell · Oct 2022</p>
+    </div>
+    <a class="pub-btn" href="https://www.cell.com/developmental-cell/fulltext/S1534-5807(22)00632-3" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Endothelial cell invasion is controlled by dactylopodia</h3>
+      <p class="pub-meta">PNAS · Apr 2021</p>
+    </div>
+    <a class="pub-btn" href="https://www.pnas.org/doi/10.1073/pnas.2023829118" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Endothelial cell invasiveness is controlled by myosin IIA-dependent inhibition of Arp2/3 activity</h3>
+      <p class="pub-meta">Preprint · BioRxiv · Sep 2020</p>
+    </div>
+    <a class="pub-btn" href="https://www.biorxiv.org/content/10.1101/2020.09.08.287466v1" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">A systems immunology approach identifies the collective impact of 5 miRs in Th2 inflammation</h3>
+      <p class="pub-meta">JCI Insight · Jul 2018</p>
+    </div>
+    <a class="pub-btn" href="https://insight.jci.org/articles/view/97503" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">A novel long non-coding RNA Myolinc regulates myogenesis through TDP-43 and Filip1</h3>
+      <p class="pub-meta">Journal of Molecular Cell Biology · Apr 2018</p>
+    </div>
+    <a class="pub-btn" href="https://academic.oup.com/jmcb/article/10/2/102/4959340" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Airn regulates Igf2bp2 translation in cardiomyocytes</h3>
+      <p class="pub-meta">Circulation Research · Feb 2018</p>
+    </div>
+    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCRESAHA.117.312215" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Long Noncoding RNA MANTIS Facilitates Endothelial Angiogenic Function</h3>
+      <p class="pub-meta">Circulation · Mar 2017</p>
+    </div>
+    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.116.026991" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Logic programming to infer complex RNA expression patterns from RNA-seq data</h3>
+      <p class="pub-meta">Briefings in Bioinformatics · Dec 2016</p>
+    </div>
+    <a class="pub-btn" href="https://academic.oup.com/bib/article/19/2/199/2606069" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Epigenetic Regulation of Angiogenesis by JARID1B-Induced Repression of HOXA5</h3>
+      <p class="pub-meta">Atherosclerosis, Thrombosis, and Vascular Biology · May 2015</p>
+    </div>
+    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/ATVBAHA.115.305561" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Long noncoding RNA MALAT1 regulates endothelial cell function and vessel growth</h3>
+      <p class="pub-meta">Circulation Research · Mar 2014</p>
+    </div>
+    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCRESAHA.114.303265" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Bacillus pumilus strains with inactivated genes of extracellular serine proteinases</h3>
+      <p class="pub-meta">Microbiology · Feb 2013</p>
+    </div>
+    <a class="pub-btn" href="https://link.springer.com/article/10.1134/S0026261713010141" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-content">
+      <h3 class="pub-title">Noncoder: a web interface for exon array-based detection of long non-coding RNAs</h3>
+      <p class="pub-meta">Nucleic Acids Research · Sep 2012</p>
+    </div>
+    <a class="pub-btn" href="https://academic.oup.com/nar/article/41/1/e20/1170952" target="_blank" rel="noopener">Show ↗</a>
+  </div>
+</div>
+  </section>
+
+<div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= HONORS ============= -->
+  <section id="achievements" class="section anchor-offset">
+    <div class="section-head">
+      <div class="section-eyebrow">// 08 - honors &amp; awards</div>
+      <h2 class="section-title">Recognition.</h2>
+    </div>
+
+    <div class="achievements-list">
+      <div class="achievement-item">
+        <div class="achievement-head">
+          <h3 class="achievement-title">Future Leaders Exchange (FLEX) Scholarship Program</h3>
+          <p class="achievement-issuer">American Councils for International Education</p>
+          <p class="achievement-where">Aug 2004 - May 2005</p>
+        </div>
+        <p class="achievement-desc">Finalist of the 2004 FLEX Scholarship Program - Lake Gibson High School, Lakeland, FL, USA. Certificate of Academic Excellence.</p>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-head">
+          <h3 class="achievement-title">Excellence in Learning</h3>
+          <p class="achievement-issuer">Gymnasium 19, Kazan, Russia</p>
+          <p class="achievement-where">Jun 2005</p>
+        </div>
+        <p class="achievement-desc">Silver medal for excellence in learning (overall GPA 5.0 / 5.0).</p>
+      </div>
+
+      <div class="achievement-item">
+        <div class="achievement-head">
+          <h3 class="achievement-title">Short-term Research Grant</h3>
+          <p class="achievement-issuer">Justus-Liebig-Universität Gießen, Germany</p>
+          <p class="achievement-where">Nov 2009 - Dec 2009 </p>
+        </div>
+        <p class="achievement-desc">Collaboration grant between Kazan Federal University and Justus-Liebig-Universität Gießen. Internship at the Laboratory of Dr. Christoph Lämmler.</p>
+      </div>
+    </div>
+  </section>
+
+<div class="web-divider" aria-hidden="true"></div>
+
+  <!-- ============= PROFESSIONAL PRINCIPLES ============= -->
 <section id="principles" class="section anchor-offset">
-  <h2 class="section-title">Professional Principles</h2>
+  <div class="section-head">
+    <div class="section-eyebrow">// 09 - professional principles</div>
+    <h2 class="section-title">How I <span class="serif-italic">work.</span></h2>
+  </div>
 
   <div class="principles-wrap">
     <div class="principles-box">
       <p>
-        I value clearly defined responsibilities, accountability, and disciplined execution of established processes. Operational structure and methodological rigor are, to me, essential for producing reliable and reproducible outcomes — and reliability builds trust.
+        I value clearly defined responsibilities, accountability, and disciplined execution of established processes.
+        Operational structure and methodological rigor are, to me, essential for producing reliable and reproducible
+        outcomes - and reliability builds trust.
       </p>
 
       <p>
-        I believe that transparent communication, constructive feedback, and openness to dialogue form the foundation of effective and strong professional collaboration. Openness to dialogue and a culture of continuous improvement are, in my view, essential for both individual growth and high-quality outcomes — it is the environment in which meaningful progress happens.
+        I believe that transparent communication, constructive feedback, and openness to dialogue form the foundation
+        of effective and strong professional collaboration. A culture of continuous improvement is, in my view, essential
+        for both individual growth and high-quality outcomes - it is the environment in which meaningful progress happens.
       </p>
     </div>
   </div>
 </section>
 
-<div class="soft-divider"></div>
+<div class="web-divider" aria-hidden="true"></div>
 
-    <!--CERTIFICATIONS & TRAINING -->
+<!-- ============= LET'S CONNECT ============= -->
+<section id="connect" class="section anchor-offset">
+  <div class="section-head">
+    <div class="section-eyebrow">// 10 - let's connect</div>
+    <h2 class="section-title">Let&rsquo;s <span class="serif-italic">connect.</span></h2>
+  </div>
 
-<section id="certifications" class="section anchor-offset">
-  <h2 class="section-title">Certificates & Training</h2>
+  <div class="connect-wrap">
+    <div class="connect-box">
+      <p>
+        If you have questions about my projects, ideas for improvement, or simply want to talk about data,
+        research, or career paths in analytics, I would be happy to chat.
+      </p>
 
-  <div class="cert-list">
-
-    <!-- 1) GOOGLE DA -->
-
-<div class="cert-item">
-  <div class="cert-left">
-    <div class="cert-name">Google Data Analytics Professional Certificate (v.3)</div>
-    <div class="cert-issuer">Google · Coursera</div>
-    <div class="cert-meta">
-      <span>Issued: Jan 2026</span>
+      <p>
+        I genuinely enjoy exchanging ideas, learning from different professional paths, and building meaningful
+        connections with people working across data, science, analytics, and technology.
+      </p>
     </div>
-  </div>
-
-  <div class="cert-right">
-    <div class="cert-actions">
-
-      <div class="cert-preview-wrapper">
-        <a class="cert-btn secondary"
-           href="certificates/google-data-analytics.pdf"
-           target="_blank" rel="noopener">
-          View PDF
-        </a>
-
-        <div class="cert-preview">
-          <img src="certificates/google-data-analytics-preview.png"
-               alt="Google Data Analytics Certificate preview">
-        </div>
-      </div>
-
-      <a class="cert-btn primary"
-         href="https://www.credly.com/badges/4eab55e0-8792-4067-960f-beebc7379644/linked_in_profile"
-         target="_blank" rel="noopener">
-        Show credential
-      </a>
-
-    </div>
-  </div>
-</div>
-    
-    
-    <!-- 2) LE WAGON DIPLOMA -->
-
-    <div class="cert-item">
-  <div class="cert-left">
-    <div class="cert-name">Le Wagon Data Analytics Bootcamp</div>
-    <div class="cert-issuer">Le Wagon</div>
-    <div class="cert-meta">
-      <span>Issued: Nov 2025</span>
-      
-    </div>
-  </div>
-
-  <div class="cert-right">
-    <div class="cert-actions">
-
-      <div class="cert-preview-wrapper">
-        <a class="cert-btn secondary"
-           href="certificates/le-wagon-diploma.pdf"
-           target="_blank" rel="noopener">
-          View PDF
-        </a>
-
-        <div class="cert-preview">
-          <img src="certificates/le-wagon-diploma-preview.png"
-               alt="Le Wagon Diploma preview">
-        </div>
-      </div>
-
-      <a class="cert-btn primary"
-         href="https://kitt.lewagon.com/schoolings/48065/public_diploma?token=d5f67fbb1706d705eff404c66eb0345103112d629fc2987ed0a70de1c15a4c81"
-         target="_blank" rel="noopener">
-        Show credential
-      </a>
-  
-    </div>
-  </div>
-</div>
-
-
-    <!-- 4) LINKEDIN LEARNNG ETL --> 
-
-    <div class="cert-item">
-  <div class="cert-left">
-    <div class="cert-name">ETL in Python and SQL</div>
-    <div class="cert-issuer">LinkedIn Learning</div>
-    <div class="cert-meta">
-      <span>Issued: Feb 2026</span>
-      
-    </div>
-  </div>
-
-  <div class="cert-right">
-    <div class="cert-actions">
-
-      <div class="cert-preview-wrapper">
-        <a class="cert-btn secondary"
-           href="certificates/etl-in-python-sql.pdf"
-           target="_blank" rel="noopener">
-          View PDF
-        </a>
-
-        <div class="cert-preview">
-          <img src="certificates/etl-in-python-sql-preview.png"
-               alt="ETL in Python and SQL Certificate preview">
-        </div>
-      </div>
-
-      <a class="cert-btn primary"
-         href="https://www.linkedin.com/learning/certificates/378903cf923e8d29949a1a4b027131ee2f5ce935a019cf69ad870710f4070618?trk=share_certificate"
-         target="_blank" rel="noopener">
-        Show credential
-      </a>
-  
-   </div>
-  </div>
-</div>
-    
-    
-<!-- 3) PRINCE2 -->
-
-<div class="cert-item">
-  <div class="cert-left">
-    <div class="cert-name">PRINCE2 Foundation Certificate in Project Management</div>
-    <div class="cert-issuer">AXELOS Global Best Practice</div>
-    <div class="cert-meta">
-      <span>Issued: Jan 2024</span>
-    </div>
-  </div>
-
-  <div class="cert-right">
-    <div class="cert-actions">
-
-      <div class="cert-preview-wrapper">
-        <a class="cert-btn secondary"
-           href="certificates/prince2.pdf"
-           target="_blank" rel="noopener">
-          View PDF
-        </a>
-
-        <div class="cert-preview" aria-hidden="true">
-          <img src="certificates/prince2-preview.png" 
-          alt="PRINCE2 Certificate preview">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-    <!-- 5) IEFP Digital Marketing -->
-
-<div class="cert-item">
-  <div class="cert-left">
-    <div class="cert-name">Marketing Digital & Plano de Negócio (Criação de PME)</div>
-    <div class="cert-issuer">IEFP — Instituto do Emprego e Formação Profissional</div>
-    <div class="cert-meta">
-      <span>Issued: Jul 2025</span>
-    </div>
-  </div>
-
-  <div class="cert-right">
-    <div class="cert-actions">
-
-      <div class="cert-preview-wrapper">
-        <a class="cert-btn secondary"
-           href="certificates/iefp-digital-marketing.pdf"
-           target="_blank" rel="noopener">
-          View PDF
-        </a>
-
-        <div class="cert-preview" aria-hidden="true">
-          <img src="certificates/iefp-digital-marketing-preview.png" 
-          alt="IEFP Digital Marketing Certificate preview">
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-    
   </div>
 </section>
 
-<div class="soft-divider"></div>
+</main>
 
-    <!--------------- PROJECTS SECTION ----------------------------------------------- -->
-<section id="projects" class="section anchor-offset">
-  <h2 class="section-title">Projects</h2>
-
-  <div class="projects-list">
-
-
-    <!-- PROJECT: Personal Portfolio -->
-
-    <article class="project-card">
-  <div class="project-text">
-    <h3 class="project-title">Personal Portfolio Website</h3>
-    <p class="project-subtitle">March 2026</p>
-
-    <div class="project-meta">
-      <span class="project-chip">CSS3</span>
-      <span class="project-chip">HTML5</span>
-      <span class="project-chip">Git & GitHub</span>
-    </div>
-
-    <p class="project-desc">
-      Developed and deployed a personal portfolio website using HTML, CSS and GitHub Pages. 
-    </p>
-
-    <div class="project-actions">
-      <a class="project-btn primary"
-         href="https://github.com/YuliyaCarvalho/Portfolio-Website"
-         target="_blank" rel="noopener">
-        View Repo
-      </a>
-</article>
-
-    <!-- PROJECT: PORTUGAL REAL-ESTATE -->
-
-    <article class="project-card">
-  <div class="project-text">
-    <h3 class="project-title">Portugal Property Atlas</h3>
-    <p class="project-subtitle">March 2026</p>
-
-    <div class="project-meta">
-      <span class="project-chip">Python</span>
-      <span class="project-chip">Google Colab</span>
-      <span class="project-chip">Power BI</span>
-    </div>
-
-    <p class="project-desc">
-      A structured analysis of the Portuguese real estate market based on web-scraped property listings.
-The project applies a systematic, audit-style exploratory analysis to identify structural inconsistencies, near-duplicate records, and cross-field conflicts. Recognizing that property types follow distinct size and attribute conventions, the dataset was segmented and validated within each category.
-The result is a cleaned, internally consistent dataset suitable for downstream modeling and quantitative market analysis.
-    </p>
-
-    <!-- bullets hidden by default; shown on hover -->
-    <div class="project-extra">
-  <ul class="project-bullets">
-    <li>Developed a structured deduplication strategy to resolve near-duplicate listings across multiple portals, preventing double-counting.</li>
-    <li>Reconstructed reliable area metrics by resolving inconsistent reporting conventions within each property type.</li>
-    <li>Designed rule-based validation checks to detect cross-field conflicts and quantify anomaly prevalence.</li>
-    <li>Documented all transformation logic to ensure full reproducibility and modeling readiness.</li>
-  </ul>
-</div>
-
-    <div class="project-actions">
-      <a class="project-btn primary"
-         href="https://github.com/YuliyaCarvalho/Portugal-Property-Atlas"
-         target="_blank" rel="noopener">
-        View Repository
-      </a>
-
-      <a class="project-btn"
-         href="https://drive.google.com/uc?export=download&id=18072345678901234567890123456789"
-         target="_blank" rel="noopener">
-        Download Dashboard (.pbix)
-      </a>
-    </div>
-  </div>
-
-  <div class="project-media">
-    <img src="assets/projects/portugal-property-atlas/portugal-property-atlas.png"
-         alt="Portugal Property Atlas cover image">
-  </div>
-</article>
-
-
-    <!-- PROJECT: OLIST -->
-
-<article class="project-card">
-  <div class="project-text">
-    <h3 class="project-title">Olist: Retention, Logistics & Risk</h3>
-    <p class="project-subtitle">Dec 2025 – Jan 2026</p>
-
-    <div class="project-meta">
-      <span class="project-chip">SQL (BigQuery)</span>
-      <span class="project-chip">R</span>
-      <span class="project-chip">Kaggle Notebook</span>
-    </div>
-
-    <p class="project-desc">
-      A comprehensive operational analytics study of Brazil’s Olist marketplace, designed to diagnose the structural drivers of customer dissatisfaction, 
-      logistics failure, and seller performance risk.
-      The project integrates SQL-based data engineering with R-driven statistical modeling, applying regression analysis, risk scoring, and route-level segmentation 
-      to uncover the independent effects of delivery delays, freight economics, and operational bottlenecks.
-      The result is a decision-oriented analytical framework quantifying revenue at risk, identifying high-impact geographic corridors, and stratifying seller 
-      performance to support targeted operational interventions.
-
-    </p>
-
-    <!-- Olist bullet points revealed on hover -->
-    <div class="project-extra">
-  <ul class="project-bullets">
-    <li>Built end-to-end analytical datasets in BigQuery integrating transaction, delivery, and review data for multi-layer operational analysis.</li>
-    <li>Validated multiple linear regression models to isolate the independent effects of delay severity, freight cost, and payment structure on review scores.</li>
-    <li>Developed a composite seller risk scoring framework weighting lateness frequency, delay magnitude, and revenue impact.</li>
-    <li>Conducted route-level origin–destination analysis to distinguish seller inefficiencies from systemic infrastructure constraints.</li>
-    <li>Engineered custom diagnostic features (e.g., fulfillment stall indicators and bulk-size classification) to enhance model interpretability.</li>
-    <li>Quantified “Revenue at Risk” to estimate financial exposure driven by dissatisfied customers and evaluate intervention ROI.</li>
-    <li>Implemented interaction regression modeling to test seasonal moderation effects on delivery-related dissatisfaction.</li>
-  </ul>
-</div>
-
-
-<div class="project-actions">
-  <a class="project-btn primary"
-     href="https://www.kaggle.com/code/yuliyacarvalho/olist-retention-logistics-risk"
-     target="_blank" rel="noopener">
-    View Kaggle Notebook
-  </a>
-
-  <a class="project-btn"
-     href="https://github.com/YuliyaCarvalho/Olist-Retention-Logistics-Risk"
-     target="_blank" rel="noopener">
-    View Repository
-  </a>
-</div>
-
-  <div class="project-media">
-    <img src="assets/projects/olist-retention-logistics-risk/olist-project-cover.png"
-         alt="Olist E-commerce Operations Analysis cover image">
-  </div>
-</article>
-
-
-<!-- PROJECT: BIODIVERSITY LOSS IN EUROPE -->
-
-<article class="project-card">
-  <div class="project-text">
-    <h3 class="project-title">Biodiversity Loss in Europe</h3>
-
-    <p class="project-subtitle">
-      Le Wagon Graduation Team Project<br>
-      <span class="project-collab">
-        in collaboration with 
-        <a href="https://www.linkedin.com/in/pascal-nissing-management-and-sustainability/" 
-           target="_blank" rel="noopener">
-           Pascal Niessing
-        </a>
-      </span>
-    </p>
-
-    <div class="project-meta">
-      <span class="project-chip">Python</span>
-      <span class="project-chip">SQL</span>
-      <span class="project-chip">Google Colab</span>
-      <span class="project-chip">Looker Studio</span>
-      <span class="project-chip">Google Sheets</span>
-    </div>
-
-    <p class="project-desc">
-      <p class="project-desc">
-  A structured environmental data analysis examining the relationship between land-use patterns, protected area coverage, and the Biodiversity Intactness Index across EU countries. 
-  The project integrates multi-source datasets and applies comparative analysis to identify cross-country structural patterns influencing biodiversity outcomes.
-Team-based project conducted as part of the Le Wagon Data Analytics Bootcamp graduation, with a focus on data integrity, analytical rigor, and clear communication of 
-complex environmental insights.
-</p>
-    </p>
-
-    <!-- Biodiversity bullet points hidden by default – revealed on hover -->
-    <div class="project-extra">
-      <ul class="project-bullets">
-        <li>Developed dashboards and visual outputs to communicate environmental indicators clearly</li>
-        <li>Constructed analytical datasets to evaluate associations between protected area coverage and biodiversity metrics</li>
-        <li>Performed cross-country comparative analysis to identify structural land-use patterns</li>
-        <li>Developed dashboards and visual outputs to communicate environmental indicators clearly</li>
-      </ul>
-    </div>
-
-    <div class="project-actions">
-      <a class="project-btn primary"
-         href="https://lookerstudio.google.com/u/0/reporting/5b86cf95-3949-4853-8f3d-2f888cea8c9d/page/p_y00jcbklxd"
-         target="_blank" rel="noopener">
-        View Report
-      </a>
-    </div>
-  </div>
-
-  <div class="project-media">
-    <img src="assets/projects/biodiversity-loss-europe/biodiversity-loss-cover.png"
-         alt="Biodiversity Loss in Europe project cover image">
-  </div>
-</article>
-
-  </div>
-</section>
-
-<div class="soft-divider"></div>
-
-
-    <!-- ===== SKILLS ===== -->
-<section id="skills" class="section anchor-offset">
-  <h2 class="section-title">Skills</h2>
-
-  <div class="skills-grid">
-
-    <!-- 1) SQL & Query Engines -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon"
-             src="https://api.iconify.design/mdi:database-outline.svg?color=%23000"
-             alt="Database icon">
-      </div>
-      <div class="pill-right">SQL &amp; Query Engines</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Platforms</div>
-
-        <div class="popover-tools popover-tools--inline">
-          <span class="tool">
-            <img class="popover-icon" src="https://cdn.simpleicons.org/duckdb/000000" alt="DuckDB">
-            <span>DuckDB</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon" src="https://www.svgrepo.com/show/375551/bigquery.svg" alt="BigQuery">
-            <span>BigQuery</span>
-          </span>
-        </div>
-
-        <ul class="popover-list">
-          <li>CTEs, subqueries, window functions</li>
-          <li>Analytical tables (cohorts, segmentation, aggregates)</li>
-          <li>Data quality checks and validation rules</li>
-          <li>Performance-aware querying (scan reduction, joins)</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 2) Python -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon" src="https://cdn.simpleicons.org/python/000000" alt="Python icon">
-      </div>
-      <div class="pill-right">Python</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Libraries</div>
-        <ul class="popover-list">
-          <li>pandas, numpy, modin</li>
-          <li>matplotlib, plotly, seaborn</li>
-          <li>scikit-learn, prophet</li>
-          <li>BeautifulSoup</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 3) R & Statistics -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon" src="https://cdn.simpleicons.org/r/000000" alt="R icon">
-      </div>
-      <div class="pill-right">R &amp; Statistics</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Tooling &amp; methods</div>
-        <ul class="popover-list">
-          <li>tidyverse (dplyr, tidyr, readr, lubridate)</li>
-          <li>ggplot2 (+ ggrepel, scales)</li>
-          <li>regression, diagnostics, hypothesis testing</li>
-          <li>rmarkdown / knitr / kableExtra / DT</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 4) Data Visualization -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon"
-             src="https://api.iconify.design/mdi:chart-line.svg?color=%23000"
-             alt="Data visualization icon">
-      </div>
-      <div class="pill-right">Data Visualization</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Tools</div>
-
-        <div class="popover-tools popover-tools--inline">
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powerbi/powerbi-original.svg"
-                 alt="Power BI">
-            <span>Power BI</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://www.svgrepo.com/show/354012/looker-icon.svg"
-                 alt="Looker Studio">
-            <span>Looker Studio</span>
-          </span>
-        </div>
-
-        <ul class="popover-list">
-          <li>Dashboard design and metric storytelling</li>
-          <li>Model-to-visual flow (clean definitions, consistent metrics)</li>
-          <li>Supporting visuals in Python/R when needed</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 5) Data Engineering & Pipelines -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon"
-             src="https://api.iconify.design/mdi:database-cog-outline.svg?color=%23000"
-             alt="Data engineering icon">
-      </div>
-      <div class="pill-right">Data Pipelines &amp; Transformation</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Modern data stack</div>
-
-        <div class="popover-tools popover-tools--inline">
-          <span class="tool">
-            <img class="popover-icon" src="https://api.iconify.design/logos:dbt-icon.svg" alt="dbt">
-            <span>dbt</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon" src="https://www.vectorlogo.zone/logos/fivetran/fivetran-icon.svg" alt="Fivetran">
-            <span>Fivetran</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg"
-                 alt="Apache Airflow">
-            <span>Airflow</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon" src="https://www.svgrepo.com/show/375551/bigquery.svg" alt="BigQuery">
-            <span>BigQuery</span>
-          </span>
-        </div>
-
-        <ul class="popover-list">
-          <li>ELT pipeline structure (raw → staging → marts)</li>
-          <li>Transformation logic with testable models</li>
-          <li>Automation + reliability mindset (checks, reruns, traceability)</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 6) Automation & APIs -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon"
-             src="https://api.iconify.design/mdi:robot-outline.svg?color=%23000"
-             alt="Automation icon">
-      </div>
-      <div class="pill-right">Automation &amp; APIs</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Tooling</div>
-
-        <div class="popover-tools popover-tools--inline">
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.simpleicons.org/zapier/000000"
-                 alt="Zapier">
-            <span>Zapier</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.simpleicons.org/googletagmanager/000000"
-                 alt="Google Tag Manager">
-            <span>GTM</span>
-          </span>
-        </div>
-
-        <ul class="popover-list">
-          <li>REST API extraction patterns</li>
-          <li>Lightweight workflow automation</li>
-          <li>Tracking + triggers (GTM)</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 7) Dev & Reproducibility -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon" src="https://cdn.simpleicons.org/github/000000" alt="GitHub icon">
-      </div>
-      <div class="pill-right">Dev &amp; Reproducibility</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">Workflow</div>
-
-        <div class="popover-tools popover-tools--inline">
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg"
-                 alt="RStudio">
-            <span>RStudio</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                 alt="VS Code">
-            <span>VS Code</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                 alt="Git">
-            <span>Git</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
-                 alt="Jupyter">
-            <span>Jupyter</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                 alt="Google Colab">
-            <span>Colab</span>
-          </span>
-
-          <span class="tool-sep">•</span>
-
-          <span class="tool">
-            <img class="popover-icon"
-                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg"
-                 alt="Kaggle">
-            <span>Kaggle</span>
-          </span>
-        </div>
-
-        <ul class="popover-list">
-          <li>Version control habits (branching, clean commits)</li>
-          <li>Reproducible notebooks and reporting</li>
-          <li>Documentation + traceable changes</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 8) Analytical Methods -->
-    <div class="skill-pill has-popover" tabindex="0">
-      <div class="pill-left">
-        <img class="pill-icon"
-             src="https://api.iconify.design/mdi:beaker-outline.svg?color=%23000"
-             alt="Analytical methods icon">
-      </div>
-      <div class="pill-right">Analytical Methods</div>
-
-      <div class="pill-popover">
-        <div class="popover-title">How I work</div>
-        <ul class="popover-list">
-          <li>Systematic EDA (consistency checks, edge cases)</li>
-          <li>Deduplication (rules + similarity signals)</li>
-          <li>Segmentation, cohorts, KPI definition</li>
-          <li>Hypothesis-driven validation</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- WORK EXPERIENCE -->
-
-<section id="work" class="section anchor-offset">
-  <h2 class="section-title">Work Experience</h2>
-
-  <div class="work-right">
-
-    <!-- JOB 1 (LAB MANAGER MISSION LAB) -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Mar 2023 – Feb 2025</div>
-        <div class="job-location">Lisbon, Portugal <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">Laboratory Manager</div>
-        <div class="job-company">Gulbenkian Institute for Molecular Medicine</div>
-        <div class="job-department">Mission Lab, GIMM-CARE</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Oversaw laboratory quality assurance, workflow optimization, and compliance across all operations.</li>
-            <li>Developed and implemented SOPs; managed equipment and suppliers; ensured strict adherence to safety protocols.</li>
-            <li>Coordinated biological sample logistics and laboratory operations for a colorectal cancer clinical study, contributing to the design and implementation of end-to-end operational, logistical, and IT-platform workflows.</li>
-            <li>Conducted diagnostic testing and analysis, delivering clear, reliable, and actionable results.</li>
-            <li>Introduced new methodologies, improved process efficiency, and trained incoming team members.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOB 2 (COVID-19) -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Nov 2020 – Feb 2023</div>
-        <div class="job-location">Lisbon, Portugal <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">COVID-19 Diagnostic Testing Specialist</div>
-        <div class="job-company">Institute for Molecular Medicine</div>
-        <div class="job-department">Molecular Diagnostic Unit</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Managed planning, coordination, and execution of 200K+ COVID-19 diagnostic tests under enhanced BSL-II conditions, ensuring strict adherence to safety protocols.</li>
-            <li>Performed qPCR result analysis and prepared detailed reports for patients and public health entities (~10K SINAVE reports).</li>
-            <li>Directed sample prioritization and patient coordination, optimizing laboratory workflow and turnaround times.</li>
-            <li>Developed and implemented SOPs; managed equipment and suppliers; ensured safety protocol adherence.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOB 3 (VML Lab)-->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Oct 2018 – Oct 2020</div>
-        <div class="job-location">Lisbon, Portugal <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">Research Fellow</div>
-        <div class="job-company">Institute for Molecular Medicine</div>
-        <div class="job-department">Vascular Morphogenesis Laboratory</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Oversaw lab management and operations, including equipment maintenance, inventory control, and staff coordination</li>
-            <li>Conducted scientific projects, provided experimental support</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOB 4 (ICVR) -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Nov 2012 – Jan 2017</div>
-        <div class="job-location">Frankfurt, Germany <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">Scientific Researcher</div>
-        <div class="job-company">Institute of Cardiovascular Regeneration, Goethe University</div>
-        <div class="job-department">Center for Molecular Medicine</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Worked on projects focused on identifying and characterizing long noncoding RNAs in mouse stem cells and heart tissue, with emphasis 
-on histone H3–bound lncRNAs, positional conservation, and tissue-specific expression and function</li>
-            <li>Co-authored 7 peer-reviewed publications in international journals (2014–2018), advancing research in long non-coding RNAs and their role in cardiovascular biology, angiogenesis, and myogenesis</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOB 5 (MPI HLR) -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Nov 2011 – Oct 2012</div>
-        <div class="job-location">Bad Nauheim, Germany <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">Invited PhD Student Researcher</div>
-        <div class="job-company">Max Planck Institute for Heart and Lung Research</div>
-        <div class="job-department">Department of Cardiac Development and Remodeling</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Conducted research on lncRNAs in embryonic stem cells, performing global transcriptome analysis during cardiac differentiation</li>
-            <li>Co-authored a peer-reviewed publication in Nucleic Acids Research (2012) on the development of “Noncoder,” a web interface for exon array–based detection of long non-coding RNAs</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- JOB 6 (MEXICO) -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Nov 2010 – Aug 2011</div>
-        <div class="job-location">Tenancingo, Mexico <br> on-site</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">R&D Technician</div>
-        <div class="job-company">Probiomed SA. de C.V.</div>
-        <div class="job-department">NL Biotechnologies LLC</div>
-
-        <div class="job-description">
-          <ul class="job-list">
-            <li>Recombinant viral hepatitis vaccine development</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="soft-divider"></div>
-
-
-    <!-- EDUCATION SECTION -->
-<section id="education" class="section anchor-offset">
-  <h2 class="section-title">Education</h2>
-
-  <div class="work-right">
-
-    <!-- MOLBIOL EDUCATION -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">Sept 2005 – Jul 2010</div>
-        <div class="job-location">Kazan, Russia</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">MSc</div>
-        <div class="job-company">Kazan Federal University</div>
-        <div class="job-department">Molecular Biology / Microbiology</div>
-
-        <div class="job-description">
-          <!-- Optional: add thesis, honors, etc. later -->
-        </div>
-      </div>
-    </div>
-
-    <!-- PSYCHOLOGY EDUCATION -->
-    <div class="work-item">
-      <div class="work-date">
-        <div class="date-range">2008 – 2010</div>
-        <div class="job-location">Kazan, Russia</div>
-      </div>
-
-      <div class="work-content">
-        <div class="job-title">Diploma</div>
-        <div class="job-company">Kazan Federal University</div>
-        <div class="job-department">Psychology</div>
-
-        <div class="job-description">
-          <!-- Optional: specialization details -->
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<div class="soft-divider"></div>
-
-
-<!-- ACHIEVEMENTS SECTION -->
-
-<section id="achievements" class="section anchor-offset section-panel panel-achievements">
-  <h2 class="section-title">Honors & Awards</h2>
-
-  <div class="achievements-list">
-
-    <!-- 1 -->
-    <div class="achievement-item">
-      <div class="achievement-content">
-        <h3 class="achievement-title">Excellence in Learning</h3>
-        <p class="achievement-meta">
-          Gymnasium 19, Kazan, Russia <br> June 2005
-        </p>
-        <p class="achievement-desc">
-          Awarded a silver medal for academic excellence (overall GPA 5.0 / 5.0).
-        </p>
-      </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="achievement-item">
-      <div class="achievement-content">
-        <h3 class="achievement-title">Future Leaders Exchange (FLEX) Scholarship Program</h3>
-        <p class="achievement-meta">
-          American Councils for International Education <br> August 2004
-        </p>
-        <p class="achievement-desc">
-          Finalist of the 2004 FLEX Scholarship Program.  
-          Lake Gibson High School, Lakeland, FL, USA — Certificate of Academic Excellence.
-        </p>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="achievement-item">
-      <div class="achievement-content">
-        <h3 class="achievement-title">Short-term Scientific Research Grant</h3>
-        <p class="achievement-meta">
-          Justus-Liebig-Universität Gießen, Germany <br> November 2009
-        </p>
-        <p class="achievement-desc">
-          Awarded a short-term research grant supporting collaboration between Kazan Federal University (Russia) and Justus-Liebig-Universität Gießen (Germany).  
-          Internship carried out at the Laboratory of Dr. Christoph Lämmler.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<div class="soft-divider"></div>
-
-
-<!-- SCIENTIFIC PUBLICATIONS SECTION -->
-
-<section id="publications" class="section anchor-offset">
-  <h2 class="section-title">Scientific Publications</h2>
-
-  <div class="pub-list">
-
-    <div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">
-      A non-genetic model of vascular shunts informs on the cellular mechanisms of formation and resolution of arteriovenous malformations
-    </h3>
-    <p class="pub-meta">Cardiovascular Research · Sep 23, 2024</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://academic.oup.com/cardiovascres/article/120/15/1967/7764578?login=false" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-    <div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Competition for endothelial cell polarity drives vascular morphogenesis in the mouse retina</h3>
-    <p class="pub-meta">Developmental Cell · Oct 10, 2022</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.cell.com/developmental-cell/fulltext/S1534-5807(22)00632-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1534580722006323%3Fshowall%3Dtrue" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Endothelial cell invasion is controlled by dactylopodia</h3>
-    <p class="pub-meta">PNAS · Apr 26, 2021</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.pnas.org/doi/10.1073/pnas.2023829118" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Endothelial cell invasiveness is controlled by myosin IIA-dependent inhibition of Arp2/3 activity</h3>
-    <p class="pub-meta">Preprint · BioRxiv · Sep 6, 2020</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.biorxiv.org/content/10.1101/2020.09.08.287466v1" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">A systems immunology approach identifies the collective impact of 5 miRs in Th2 inflammation</h3>
-    <p class="pub-meta">JCI Insight · Jul 6, 2018</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://insight.jci.org/articles/view/97503" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">A novel long non-coding RNA Myolinc regulates myogenesis through TDP-43 and Filip1</h3>
-    <p class="pub-meta">Journal of Molecular Cell Biology · Apr 28, 2018</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://academic.oup.com/jmcb/article/10/2/102/4959340?login=false" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Airn regulates Igf2bp2 translation in cardiomyocytes</h3>
-    <p class="pub-meta">Circulation Research · Feb 26, 2018</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCRESAHA.117.312215?rfr_dat=cr_pub%3Dpubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Long Noncoding RNA MANTIS Facilitates Endothelial Angiogenic Function</h3>
-    <p class="pub-meta">Circulation · Mar 28, 2017</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.116.026991?rfr_dat=cr_pub%3Dpubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Logic programming to infer complex RNA expression patterns from RNA-seq data</h3>
-    <p class="pub-meta">Briefings in Bioinformatics · Dec 7, 2016</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://academic.oup.com/bib/article/19/2/199/2606069?login=false" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Epigenetic Regulation of Angiogenesis by JARID1B-Induced Repression of HOXA5</h3>
-    <p class="pub-meta">Atherosclerosis, Thrombosis, and Vascular Biology · May 28, 2015</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/ATVBAHA.115.305561?rfr_dat=cr_pub%3Dpubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Long noncoding RNA MALAT1 regulates endothelial cell function and vessel growth</h3>
-    <p class="pub-meta">Circulation Research · Mar 6, 2014</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://www.ahajournals.org/doi/full/10.1161/CIRCRESAHA.114.303265?rfr_dat=cr_pub%3Dpubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Bacillus pumilus strains with inactivated genes of extracellular serine proteinases</h3>
-    <p class="pub-meta">Microbiology · Feb 17, 2013</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://link.springer.com/article/10.1134/S0026261713010141" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-content">
-    <h3 class="pub-title">Noncoder: a web interface for exon array-based detection of long non-coding RNAs</h3>
-    <p class="pub-meta">Nucleic Acids Research · Sep 24, 2012</p>
-  </div>
-
-  <div class="pub-actions">
-    <a class="pub-btn" href="https://academic.oup.com/nar/article/41/1/e20/1170952?login=false" target="_blank" rel="noopener">
-      Show publication
-      <svg class="pub-icon" viewBox="0 0 24 24" fill="none">
-        <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-    </a>
-  </div>
-</div>
-</section>
-
-
-<div class="soft-divider"></div>
-
-
-<!-- Contacts -->
-  
-<section id="contact" class="section section-connect">
-    <h2 class="section-title">Let’s Connect</h2>
-
-    <div class="connect-text">
-    <p> 
-    If you're hiring for Junior Data Analyst, BI, Data Engineer, or Data Scientist roles, I’d be happy to connect. I’m especially interested in opportunities that combine 
-    thoughtful data cleaning, meaningful KPI design, and analytical problem-solving with real-world impact.
-    </p>
-
-    <p> 
-    If you have questions about my projects, ideas for improvement, or just want to talk about data, research, or career paths in analytics, I'd be happy to chat. 
-    I genuinely enjoy exchanging ideas and building meaningful professional connections.
-    </p>
-    </div>
-</section>
-
-</div> <!-- CLOSE .wrap -->
-
-
-
+<!-- ============= FOOTER / DOCK ============= -->
 <footer class="site-footer">
   <div class="footer-inner">
-
-    <div class="footer-left">
-      © <span id="year"></span> Yulia Carvalho
-    </div>
-
-    <div class="footer-center">
-      Designed & developed by Yulia Carvalho <br> Deployed via GitHub Pages<br>
-      <span class="footer-date">
-        Last updated: <span id="date"></span>
-      </span>
-    </div>
-
+    <div>© <span id="year">2026</span> YULIA CARVALHO · LISBON, PT</div>
     <div class="footer-icons">
-      <a href="https://www.linkedin.com/in/yulia-carvalho/" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+      <a href="/cdn-cgi/l/email-protection#c4bdb1a8adbda5eaa7a5b6b2a5a8acab84a3a9a5ada8eaa7aba9" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
       </a>
-
-      <a href="https://github.com/YuliyaCarvalho" target="_blank" rel="noopener">
-        <img src="https://cdn.simpleicons.org/github/000000" alt="GitHub">
+      <a href="https://www.linkedin.com/in/yuliyacarvalho/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v15.5H.22V8zm7.65 0h4.37v2.12h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 7v8.76h-4.55v-7.77c0-1.85-.03-4.23-2.58-4.23-2.58 0-2.97 2.02-2.97 4.1v7.9H7.87V8z"/></svg>
       </a>
-
-      <a href="https://www.kaggle.com/yuliyacarvalho" target="_blank" rel="noopener">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" alt="Kaggle">
+      <a href="https://github.com/YuliyaCarvalho" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.07 3.29 9.36 7.86 10.88.58.1.79-.25.79-.55v-2.16c-3.2.7-3.87-1.36-3.87-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.86-.38.97 0 1.95.13 2.86.38 2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.66.8.55C20.21 21.36 23.5 17.07 23.5 12 23.5 5.7 18.3.5 12 .5z"/></svg>
       </a>
-
-      <a href="https://orcid.org/0000-0003-3733-1690" target="_blank" rel="noopener">
-        <img src="https://cdn.simpleicons.org/orcid/80C342" alt="ORCID">
+      <a href="https://orcid.org/0000-0001-7732-0149" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zM7.37 18.32H5.62V7.32h1.75v11zM6.5 6.13a1.05 1.05 0 110-2.1 1.05 1.05 0 010 2.1zm12.07 12.19h-3.7c-3.62 0-5.4-2.55-5.4-5.5 0-3.4 2.16-5.5 5.34-5.5h3.76v11zm-1.78-9.43h-1.85c-2.16 0-3.34 1.36-3.34 3.93 0 2.34 1.5 3.93 3.34 3.93h1.85V8.89z"/></svg>
       </a>
-
-      <a href="mailto:yuliya.carvalho@gmail.com?subject=Regarding your portfolio" target="_blank" rel="noopener">
-        <img src="https://cdn.simpleicons.org/gmail/EA4335" alt="Gmail">
+      <a href="https://www.kaggle.com/yuliyacarvalho" target="_blank" rel="noopener" aria-label="Kaggle" title="Kaggle">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.83 23.61l-7.42-9.43-1.95 1.84v7.23a.36.36 0 01-.36.36H5.7a.36.36 0 01-.36-.36V.36C5.34.16 5.5 0 5.7 0H9.1c.2 0 .36.16.36.36v13.45L17.06 6.6a.55.55 0 01.4-.16h3.93c.16 0 .27.07.32.2.05.13.02.26-.07.36l-7.65 7.39 7.97 9.84c.09.12.1.24.05.36-.05.13-.16.21-.31.21h-2.55a.41.41 0 01-.32-.18z"/></svg>
       </a>
     </div>
-
+    <div class="footer-build">designed &amp; built - 2026</div>
   </div>
 </footer>
 
-
-<nav class="dock-nav dock-glass" aria-label="Section navigation">
-  <!-- MAIN (most important) -->
-  <a class="dock-link" href="#home" data-target="home">Home</a>
-  <a class="dock-link" href="#about" data-target="about">About</a>
-  <a class="dock-link" href="#projects" data-target="projects">Projects</a>
-  <a class="dock-link" href="#certifications" data-target="certifications">Certificates & Training</a>
-  <a class="dock-link" href="#work" data-target="work">Work</a>
-  
-  
-
-  <!-- OTHER (less frequently used) -->
-  <div class="dock-more" id="dockMore">
-    <button class="dock-more-btn" type="button" aria-haspopup="true" aria-expanded="false">
-      Other <span class="dock-caret">▾</span>
-    </button>
-
-    <div class="dock-menu" role="menu" aria-label="More sections">
-      <a class="dock-link dock-link--menu" href="#education" data-target="education" role="menuitem">Education</a>    
-      
-      <a class="dock-link dock-link--menu" href="#skills" data-target="skills" role="menuitem">Skills</a>
-      <a class="dock-link dock-link--menu" href="#achievements" data-target="achievements" role="menuitem">Honors & Awards</a>
-      <a class="dock-link dock-link--menu" href="#publications" data-target="publications" role="menuitem">Publications</a>
-      <a class="dock-link dock-link--menu" href="#contact" data-target="contact" role="menuitem">Contacts</a>
+<!-- ============= DOCK ============= -->
+<nav class="dock-glass" aria-label="Section navigation">
+  <a class="dock-link" href="#about">ABOUT</a>
+  <a class="dock-link" href="#projects">PROJECTS</a>
+  <a class="dock-link" href="#skills">SKILLS</a>
+  <a class="dock-link" href="#work">EXPERIENCE</a>
+  <a class="dock-link" href="#education">EDUCATION</a>
+  <div class="dock-more">
+    <button class="dock-more-btn" type="button">OTHER ▾</button>
+    <div class="dock-menu">
+      <a class="dock-link dock-link--menu" href="#certifications">CERTIFICATES</a>
+      <a class="dock-link dock-link--menu" href="#publications">PUBLICATIONS</a>
+      <a class="dock-link dock-link--menu" href="#achievements">HONORS &amp; AWARDS</a>
     </div>
   </div>
 </nav>
 
-
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const allLinks = Array.from(document.querySelectorAll(".dock-link"));
-  const moreWrap = document.getElementById("dockMore");
-  const moreBtn = moreWrap?.querySelector(".dock-more-btn");
-
-  const sections = allLinks
-    .map(a => document.getElementById(a.dataset.target))
-    .filter(Boolean);
-
-  function setActive(id){
-    allLinks.forEach(a => a.classList.remove("active"));
-    const match = allLinks.find(a => a.dataset.target === id);
-    if (match) match.classList.add("active");
-
-    const activeIsInMenu = match?.classList.contains("dock-link--menu");
-    if (moreWrap) moreWrap.classList.toggle("has-active", !!activeIsInMenu);
-  }
-
-  allLinks.forEach(a => {
-    a.addEventListener("click", () => {
-      setActive(a.dataset.target);
-      if (moreWrap) moreWrap.classList.remove("open");
-      if (moreBtn) moreBtn.setAttribute("aria-expanded", "false");
+  const back = document.getElementById('backToTop');
+  const onScroll = () => {
+    if (window.scrollY > 400) back.classList.add('show');
+    else back.classList.remove('show');
+    const sections = ['about','projects','skills','work','education','certifications','publications','achievements','principles','connect'];
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top < 200) current = id;
     });
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (visible) setActive(visible.target.id);
-  }, { threshold: [0.25, 0.4, 0.55] });
-
-  sections.forEach(sec => observer.observe(sec));
-
-  if (moreBtn && moreWrap){
-    moreBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const isOpen = moreWrap.classList.toggle("open");
-      moreBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    document.querySelectorAll('.dock-link').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
     });
-
-    document.addEventListener("click", (e) => {
-      if (!moreWrap.contains(e.target)) {
-        moreWrap.classList.remove("open");
-        moreBtn.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  setActive("home");
-});
+    const otherIds = ['certifications','publications','achievements'];
+    document.querySelector('.dock-more')?.classList.toggle('has-active', otherIds.includes(current));
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const backToTop = document.getElementById("backToTop");
-  if (!backToTop) return;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) backToTop.classList.add("show");
-    else backToTop.classList.remove("show");
-  });
-
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-});
-</script>
 
 </body>
 </html>
