@@ -178,13 +178,13 @@
     <p class="project-desc">
       A production-grade data engineering pipeline ingesting hourly weather observations from 222 meteorological
       stations across Portugal via the IPMA public API. Implements a layered architecture (raw → staging → mart)
-      with automated data quality testing, incremental batch loading, and daily scheduling — designed to power
+      with automated data quality testing, incremental batch loading, and daily scheduling - designed to power
       a continuously updating Looker Studio dashboard.
     </p>
 
     <div class="project-stats">
       <div class="pstat">
-        <div class="pv">4151</div>
+        <div class="pv">~4151</div>
         <div class="pl">observations per day</div>
       </div>
       <div class="pstat">
@@ -202,7 +202,7 @@
         <li>
           Automated Incremental Ingestion: Built a Python ingestion script that calls the IPMA public API daily,
           fetching hourly weather observations from 222 meteorological stations across Portugal and appending
-          raw batches to BigQuery — fully scheduled via GitHub Actions with zero manual intervention.
+          raw batches to BigQuery - fully scheduled via GitHub Actions with zero manual intervention.
         </li>
         <li>
           Raw Layer Integrity: Designed an append-only raw layer that preserves the complete historical record
@@ -210,19 +210,19 @@
           root cause analysis of any downstream data issues.
         </li>
         <li>
-          Multi-Table Pipeline Architecture: Engineered a dual-table ingestion pattern — append-only observations
-          and truncate-reload stations — reflecting the different update semantics of each source and ensuring
+          Multi-Table Pipeline Architecture: Engineered a dual-table ingestion pattern: append-only observations
+          and truncate-reload stations - reflecting the different update semantics of each source and ensuring
           station metadata is always current without accumulating redundant history.
         </li>
         <li>
           Layered dbt Transformation: Implemented a two-layer dbt model (staging → mart) separating raw data
-          cleaning from business-ready serving, applying type casting, sentinel value nullification (-99.0 → NULL),
-          wind direction decoding, and deduplication on natural key (observed_at, station_id).
+          cleaning from business-ready serving, applying type casting, sentinel value nullification,
+          wind direction decoding, and deduplication on natural key.
         </li>
         <li>
           Automated Data Quality Framework: Defined 8 dbt tests covering null constraints, timestamp validity,
           accepted value ranges for all measurement fields (temperature, humidity, wind speed, pressure), and
-          wind direction label integrity — pipeline fails automatically if any test is violated.
+          wind direction label integrity - pipeline fails automatically if any test is violated.
         </li>
         <li>
           Production-Grade Scheduling: Orchestrated the full pipeline (ingest → dbt run → dbt test) via GitHub
@@ -232,7 +232,7 @@
         <li>
           Next Steps: Connect the mart layer to Looker Studio to deliver a live, auto-refreshing dashboard
           tracking temperature, precipitation, wind, and humidity trends across Portugal's 222 monitoring
-          stations — completing the pipeline from raw API ingestion to interactive business intelligence.
+          stations - completing the pipeline from raw API ingestion to interactive business intelligence.
         </li>
       </ul>
     </div>
