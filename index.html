@@ -200,39 +200,34 @@
     <div class="project-extra">
       <ul class="project-bullets">
         <li>
-          Automated Incremental Ingestion: Built a Python ingestion script that calls the IPMA public API daily,
-          fetching hourly weather observations from 222 meteorological stations across Portugal and appending
-          raw batches to BigQuery - fully scheduled via GitHub Actions with zero manual intervention.
+          Automated Incremental Ingestion: Python script calls the IPMA public API daily, fetching hourly observations 
+          from 222 stations across Portugal and appending raw batches to BigQuery - fully scheduled via GitHub Actions 
+          with zero manual intervention.
         </li>
         <li>
-          Raw Layer Integrity: Designed an append-only raw layer that preserves the complete historical record
-          of API responses, including an ingestion timestamp on every row to enable full auditability and
-          root cause analysis of any downstream data issues.
+          Raw Layer Integrity: Append-only raw layer preserves the complete API response history, with an `ingested_at` 
+          timestamp on every row for full auditability and root cause tracing.
         </li>
         <li>
-          Multi-Table Pipeline Architecture: Engineered a dual-table ingestion pattern: append-only observations
-          and truncate-reload stations - reflecting the different update semantics of each source and ensuring
-          station metadata is always current without accumulating redundant history.
+          Multi-Table Pipeline Architecture: Dual-table ingestion pattern: append-only observations and truncate-reload 
+          stations - reflecting the different update semantics of each source.
         </li>
         <li>
-          Layered dbt Transformation: Implemented a two-layer dbt model (staging → mart) separating raw data
-          cleaning from business-ready serving, applying type casting, sentinel value nullification,
-          wind direction decoding, and deduplication on natural key.
+          Layered dbt Transformation: Two-layer dbt model (staging → mart) applying type casting, sentinel value 
+          nullification, wind direction decoding, and deduplication on natural key.
         </li>
         <li>
-          Automated Data Quality Framework: Defined 8 dbt tests covering null constraints, timestamp validity,
-          accepted value ranges for all measurement fields (temperature, humidity, wind speed, pressure), and
-          wind direction label integrity - pipeline fails automatically if any test is violated.
+          Automated Data Quality Framework: 8 dbt tests covering null constraints, timestamp validity, and accepted 
+          ranges for all measurement fields - pipeline fails automatically if any test is violated.
         </li>
         <li>
-          Production-Grade Scheduling: Orchestrated the full pipeline (ingest → dbt run → dbt test) via GitHub
-          Actions cron workflow, with automatic failure notifications and run logs providing full observability
-          without additional tooling.
+          Production-Grade Scheduling: Full pipeline (ingest → dbt run → dbt test) orchestrated via GitHub
+          Actions cron, with automatic failure notifications and run logs for full observability.
         </li>
         <li>
           Next Steps: Connect the mart layer to Looker Studio to deliver a live, auto-refreshing dashboard
           tracking temperature, precipitation, wind, and humidity trends across Portugal's 222 monitoring
-          stations - completing the pipeline from raw API ingestion to interactive business intelligence.
+          stations.
         </li>
       </ul>
     </div>
