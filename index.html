@@ -153,105 +153,105 @@
   <div class="projects-list">
 
     <!-- IPMA WEATHER PIPELINE -->
-<article class="project-card" id="proj-ipma">
-  <div class="project-text">
-    <div class="project-tagline">
-      <span class="tag tag-accent">DATA ENGINEERING</span>
-      <span class="tag-meta">MAY 2026</span>
-    </div>
+    <article class="project-card" id="proj-ipma">
+      <div class="project-text">
+        <div class="project-tagline">
+          <span class="tag tag-accent">DATA ENGINEERING</span>
+          <span class="tag-meta">MAY 2026</span>
+        </div>
 
-    <h3 class="project-title">
-      IPMA Weather Pipeline: Automated Ingestion, Transformation &amp; <span class="serif-italic">Live Dashboard</span>
-    </h3>
+        <h3 class="project-title">
+          IPMA Weather Pipeline: Automated Ingestion, Transformation &amp; <span class="serif-italic">Live Dashboard</span>
+        </h3>
 
-    <p class="project-collab">
-      End-to-end data engineering pipeline delivering daily weather observations to a live <strong>Streamlit</strong> dashboard
-    </p>
+        <p class="project-collab">
+          End-to-end data engineering pipeline delivering daily weather observations to a live <strong>Streamlit</strong> dashboard
+        </p>
 
-    <div class="project-chips">
-      <span class="chip">Python · BigQuery</span>
-      <span class="chip">dbt</span>
-      <span class="chip">GitHub Actions</span>
-      <span class="chip">Streamlit</span>
-    </div>
+        <div class="project-chips">
+          <span class="chip">Python · BigQuery</span>
+          <span class="chip">dbt</span>
+          <span class="chip">GitHub Actions</span>
+          <span class="chip">Streamlit</span>
+        </div>
 
-    <p class="project-desc">
-      A production-grade data engineering pipeline ingesting hourly weather observations from ~197 meteorological
-      stations across Portugal via the IPMA public API. Implements a layered architecture (raw → staging → mart)
-      with automated data quality testing, incremental batch loading, and daily scheduling — powering a live
-      interactive Streamlit dashboard with real-time station monitoring, regional temperature maps, and 24-hour trend analysis.
-    </p>
+        <p class="project-desc">
+          A production-grade data engineering pipeline ingesting hourly weather observations from ~197 meteorological
+          stations across Portugal via the IPMA public API. Implements a layered architecture (raw → staging → mart)
+          with automated data quality testing, incremental batch loading, and daily scheduling — powering a live
+          interactive Streamlit dashboard with real-time station monitoring, regional temperature maps, and 24-hour trend analysis.
+        </p>
 
-    <div class="project-stats">
-      <div class="pstat">
-        <div class="pv">~4500</div>
-        <div class="pl">observations per day</div>
+        <div class="project-stats">
+          <div class="pstat">
+            <div class="pv">~4500</div>
+            <div class="pl">observations per day</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">197</div>
+            <div class="pl">stations monitored</div>
+          </div>
+          <div class="pstat">
+            <div class="pv">8</div>
+            <div class="pl">automated quality tests</div>
+          </div>
+        </div>
+
+        <div class="project-extra">
+          <ul class="project-bullets">
+            <li>
+              Automated Incremental Ingestion: Python script calls the IPMA public API daily, fetching hourly observations
+              from 197 stations across Portugal and appending raw batches to BigQuery — fully scheduled via GitHub Actions
+              with zero manual intervention.
+            </li>
+            <li>
+              Raw Layer Integrity: Append-only raw layer preserves the complete API response history, with an ingested_at
+              timestamp on every row for full auditability and root cause tracing.
+            </li>
+            <li>
+              Multi-Table Pipeline Architecture: Dual-table ingestion pattern — append-only observations and truncate-reload
+              stations — reflecting the different update semantics of each source.
+            </li>
+            <li>
+              Layered dbt Transformation: Two-layer dbt model (staging → mart) applying type casting, sentinel value
+              nullification, wind direction decoding, deduplication on natural key, and a custom 7-region geographic
+              classification of all stations across Continental Portugal, Açores, and Madeira.
+            </li>
+            <li>
+              Automated Data Quality Framework: 8 dbt tests covering null constraints, timestamp validity, and accepted
+              ranges for all measurement fields — pipeline fails automatically if any test is violated.
+            </li>
+            <li>
+              Production-Grade Scheduling: Full pipeline (ingest → dbt run → dbt test) orchestrated via GitHub
+              Actions cron, with automatic failure notifications and run logs for full observability.
+            </li>
+            <li>
+              Live Interactive Dashboard: Custom Streamlit app connected directly to BigQuery mart, featuring a
+              Plotly choropleth map with regional temperature gradients, per-station metric cards with trend indicators,
+              24-hour temperature area charts, and bilingual EN/PT interface — deployed on Streamlit Community Cloud.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-actions">
+          <a class="action action-light"
+             href="https://github.com/YuliyaCarvalho/ipma-weather-pipeline"
+             target="_blank"
+             rel="noopener">Repository ↗</a>
+          <a class="action action-accent"
+             href="https://portugal-weather.streamlit.app/"
+             target="_blank"
+             rel="noopener">Live Dashboard ↗</a>
+        </div>
       </div>
-      <div class="pstat">
-        <div class="pv">197</div>
-        <div class="pl">stations monitored</div>
+
+      <div class="project-media">
+        <img src="assets/ipma-cover.png" alt="IPMA Weather Pipeline - Portugal weather stations map">
+        <div class="media-caption">
+          <span class="google-da-mark">IPMA&nbsp;WEATHER PIPELINE</span>
+        </div>
       </div>
-      <div class="pstat">
-        <div class="pv">8</div>
-        <div class="pl">automated quality tests</div>
-      </div>
-    </div>
-
-    <div class="project-extra">
-      <ul class="project-bullets">
-        <li>
-          Automated Incremental Ingestion: Python script calls the IPMA public API daily, fetching hourly observations
-          from 197 stations across Portugal and appending raw batches to BigQuery — fully scheduled via GitHub Actions
-          with zero manual intervention.
-        </li>
-        <li>
-          Raw Layer Integrity: Append-only raw layer preserves the complete API response history, with an ingested_at
-          timestamp on every row for full auditability and root cause tracing.
-        </li>
-        <li>
-          Multi-Table Pipeline Architecture: Dual-table ingestion pattern — append-only observations and truncate-reload
-          stations — reflecting the different update semantics of each source.
-        </li>
-        <li>
-          Layered dbt Transformation: Two-layer dbt model (staging → mart) applying type casting, sentinel value
-          nullification, wind direction decoding, deduplication on natural key, and a custom 7-region geographic
-          classification of all stations across Continental Portugal, Açores, and Madeira.
-        </li>
-        <li>
-          Automated Data Quality Framework: 8 dbt tests covering null constraints, timestamp validity, and accepted
-          ranges for all measurement fields — pipeline fails automatically if any test is violated.
-        </li>
-        <li>
-          Production-Grade Scheduling: Full pipeline (ingest → dbt run → dbt test) orchestrated via GitHub
-          Actions cron, with automatic failure notifications and run logs for full observability.
-        </li>
-        <li>
-          Live Interactive Dashboard: Custom Streamlit app connected directly to BigQuery mart, featuring a
-          Plotly choropleth map with regional temperature gradients, per-station metric cards with trend indicators,
-          24-hour temperature area charts, and bilingual EN/PT interface — deployed on Streamlit Community Cloud.
-        </li>
-      </ul>
-    </div>
-
-    <div class="project-actions">
-  <a class="action action-light"
-     href="https://github.com/YuliyaCarvalho/ipma-weather-pipeline"
-     target="_blank"
-     rel="noopener">Repository ↗</a>
-  <a class="action action-accent"
-     href="https://portugal-weather.streamlit.app/"
-     target="_blank"
-     rel="noopener">Live Dashboard ↗</a>
-</div>
-  </div>
-
-  <div class="project-media">
-    <img src="assets/ipma-cover.png" alt="IPMA Weather Pipeline - Portugal weather stations map">
-    <div class="media-caption">
-      <span class="google-da-mark">IPMA&nbsp;WEATHER PIPELINE</span>
-    </div>
-  </div>
-</article>
+    </article>
 
     <!-- PORTFOLIO -->
     <article class="project-card project-card--simple" id="proj-portfolio">
@@ -492,6 +492,8 @@
 
   </div>
 </section>
+
+<div class="web-divider" aria-hidden="true"></div>
 
 <div class="web-divider" aria-hidden="true"></div>
 
