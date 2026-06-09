@@ -650,15 +650,16 @@ a { color: inherit; }
   color: var(--accent);
   border-color: rgba(89,70,229,.22);
 }
+.action-accent:hover { background: var(--accent); color: #fff; }
 .action-medium {
+  position: relative;
   background: #5946e5;
   color: #ffffff;
   border-color: #5946e5;
 }
-.action-medium:hover { background: #5946e5; box-shadow: var(--shadow-soft); }
-.action-accent:hover { background: var(--accent); color: #fff; }
-.action-medium {
-  position: relative;
+.action-medium:hover {
+  background: #5946e5;
+  box-shadow: var(--shadow-soft);
 }
 .action-medium::after {
   content: '';
@@ -668,7 +669,7 @@ a { color: inherit; }
   transform: translateX(-50%) scale(0.95);
   width: 280px;
   height: 160px;
-  background: url('../assets/olist-medium-preview.png') center/cover no-repeat;
+  background: url('assets/olist-medium-preview.png') center/cover no-repeat;
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   opacity: 0;
